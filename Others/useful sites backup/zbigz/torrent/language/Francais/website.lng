@@ -1,0 +1,824 @@
+<?php
+/** 
+URL:http://www.dle-fr.org/
+Description: Traduit par: LORD59 Team DLE-FR.org support fr
+Version: 10.3 Revision:  0
+**/
+
+$lang = array (
+
+'charset'			=>	"utf-8",
+'wysiwyg_language'		=>  "fr",
+
+'title_prez'	=>	"Générateur prez:",
+
+// 10.3
+'system_default'	=>	"Paramètres par défaut du système",
+'social_err_1'		=>	"les données utilisateur sur le réseau social. Ou a été incorrectement spécifié clé privée dans votre réseau ou sur le serveur ne permet pas de connexion externe sortante, et ne pouvait pas se connecter au réseau social.",
+'social_err_2'		=>	"réseau social non pris en charge.",
+'social_err_3'		=>	"erreur les données des utilisateurs du réseau social.",
+'social_login_ok'	=>	"Vous êtes connecté au site. Maintenant, vous serez automatiquement déplacé sur le site. Sinon, fermez la fenêtre et redémarrez le site Web dans votre navigateur.",
+'reg_err_36'        =>  "Vous êtes déjà inscrit avec votre adresse e-mail sur notre site, soit directement, soit par l'utilisation d'autres réseaux sociaux. Connectez-vous avec votre identifiant et votre mot de passe. Si vous ne vous souvenez pas de votre mot de passe, faire une demande de récupération de mot de passe celui ci sera envoyer à votre adresse e-mail.",
+'reg_err_37'        =>  "Pour continuer l'enregistrement sur le site, vous devez entrer votre adresse e-mail:",
+'reg_err_38'        =>  "Cette adresse est utilisée par un autre utilisateur.",
+'reg_err_39'        =>  "Détecté un problème avec le travail des sessions PHP sur votre serveur. Vous devez contacter votre support d hébergement, de vérifier que les sessions PHP.",
+'reg_err_40'        =>  "Impossible d'obtenir votre adresse e-mail du réseau social avec lequel vous essayez de vous connecter. l'adresse e-mail est nécessaire pour la connexion au site. vérifié celle ci dans les paramètres de votre réseau social.",
+'social_next'       =>  "continuer",
+'fav_plus'     	    =>  "ajouter à vos favoris",
+'fav_minus'     	=>  "supprimé de vos favoris",
+// 10.3
+
+// 10.2
+'bb_b_approve'			=>	"Enregistrer et publier.",
+'not_bday'			    =>  "Non indiquer.",
+'g_it'			    =>  "Non indiquer.",
+// 10.2
+
+// 10.1
+'lost_err_2'			=>	"L administration du site a interdit la restauration des mots de passe oublié pour ce groupe d'utilisateurs.",
+'reg_err_35'        	=>  "Malheureusement, vous ne pouvez pas vous inscrire sur notre site, car votre adresse E-mail à déjà été utilisée pour du spam.",
+// 10.1
+
+
+// 10.0
+'static_page_err'		=>	"Malheureusement, la page {page} n est pas disponible pour vous: peut avoir été modifié URL a été supprimé. S' il vous plaît utilisez la recherche.",
+'p_del'					=>	"supprimer",
+'mail_complaint'	    =>  "La notification d une nouvelle plainte sur le site",
+'mail_complaint_1'	    =>  "Cet avis a été envoyé sur le site: {site} vous avez reçu une nouvelle plainte de la part des visiteurs de votre site web.Pour voir la plainte et décider de toute action, vous devez vous identifier sur le site du panneau de contrôle et allez dans la liste des plaintes.",
+'reg_err_28'        	=>  "Malheureusement, vous ne pouvez pas vous inscrire sur notre site, car votre adresse IP a déjà été utilisé pour envoyer du spam. Si vous n'avez jamais participé aux spams, cela signifie que votre adresse IP déjà utilisée par des spammeurs, vous devez changer votre adresse IP de votre fournisseur de services Internet et vous serez en mesure de vous enregistrer sur notre site internet.",
+'reg_err_29'        	=>  "Malheureusement, vous ne pouvez pas poster des commentaires sur notre site, car votre adresse IP ou l adresse E-Mail a déjà été utilisé pour envoyer du spam. Si vous n'avez jamais participé à spam, cela signifie que votre adresse IP déjà utilisée par des spammeurs, vous devez changer votre adresse IP auprès de votre FAI et vous pourrez  vous inscrire sur notre site.",
+'reg_err_34'        	=>  "<li>Malheureusement, vous ne pouvez pas envoyer des messages à notre site, car votre adresse IP ou l adresse E-Mail a déjà été utilisé pour envoyer du spam. Si vous n'avez jamais participé à spam, cela signifie que votre adresse IP déjà utilisée par des spammeurs, vous devez changer votre adresse IP auprès de votre FAI et vous pourrez vous inscrire sur notre site.</li>",
+
+// 10.0
+
+// 9.8
+'mark_spam'			=>	"Voulez-vous vraiment marquer cet utilisateur comme un spammeur ? Ceci va supprimer tous ses commentaires",
+// 9.8
+
+// 9.7
+'paste_text'		=>	"Coller comme texte",
+'bb_t_yvideo'		=>	"La lecture vidéo avec la vidéo",
+'reg_err_26'        =>  "Administrateur du site interdit l'enregistrement de plusieurs comptes sur le site en utilisant la même adresse IP. Votre adresse IP est déjà utilisée sur un compte.",
+'reg_err_27'        =>  "Vous êtes déjà connecté au site avec un compte enregistré.",
+// 9.7
+
+// 9.6
+'pm_progress_bar'	=>	"Niveau de remplissage des messages personnels:",
+'no_pm_limit'		=>	"aucune limite",
+'pm_set_read'		=>	"Marquer comme lu",
+'pm_set_unread'		=>	"Décochez la lecture",
+'s_fshort'			=>	"Newsflash:",
+'s_ffull'			=>	"Lire l'article:",
+'bb_t_t'			=>	"imprimer",
+// 9.6
+
+// 9.5
+'news_err_45'		=>	"vous avez dépassez la limite par jour de commentaires que vous êtes autorisé à  publier sur le site. Votre limite sur le nombre de commentaires par jour: <b>{max}</b>",
+'images_align'		=>	"Alignement",
+'images_left'		=>	"A gauche",
+'images_right'		=>	"A droite",
+'images_center'		=>	"Au centre",
+'images_none'		=>	"Aucun",
+'bb_alt_image'		=>	"Entrez une description de l'image",
+'bb_t_audio'		=>	"Insérer une piste audio (mp3)",
+'bb_t_color'		=>	"Le choix de la couleur",
+'bb_t_spoiler'		=>	"Insérer Spoiler",
+'bb_t_flash'		=>	"Insérer une vidéo Flash",
+'bb_t_youtube'		=>	"Insérez un contenu multimédia à  partir d'autres services",
+'bb_t_list1'		=>	"Insérer la liste",
+'bb_t_list2'		=>	"Insérer une liste numérotée",
+'s_fword'			=>	"Phrase exacte Tous les mots",
+'addnews_cat_sel'	=>	"Sélectionnez une catégorie ...",
+// 9.5
+
+// 9.4
+ p_save 			=>	"Enregistrer",
+ n_save_ok 			=>	"Les modifications ont bien été enregistré.",
+ addnews_xf_alert 	=>	"Echec le champs supplémentaires requis",
+ editnews_error 	=>	"Non autorise a modifier cette nouvelles.",
+ login_metod 		=>	"Connectez vous:",
+ login_err_3 		=>	"Attention, la conection a echoue. Vous avez entre un Email ou mot de passe invalide.",
+ xf_notig 			=>	"Obligatoire",
+ anti_modified 		=>  "ne correspond pas &#224; l image",
+ anti_not 			=>  "Distribution inconnu",
+ anti_subj 			=>  "Le resultat des tests de logiciels antivirus sur votre site",
+ anti_message_1 	=>  "Cher administrateur, Les resultats de la verification ont trouves des fichiers suspects:",
+ anti_message_2 	=>  "Il est fortement recommande que vous supprimez des fichiers inconnus.",
+ big_text 			=>  "Zone de texte selectionnée trop grande.",
+ orfo_title 		=>  "Entrez un commentaire pour Prevenir deune erreur",
+ reg_err_24         =>  "<li>Vous avez entré une mauvaise réponse a la question</li>",
+// 9.4
+
+// 9.3
+ change_mail_subj 	=>	"Demande de changement d adresse e-mail",
+ change_mail 		=>	"<li>Cher visiteur! Vous avez changé votre adresse email. Vous recevrez un email avec les instructions.</li>",
+ change_mail_1 		=>	"Cher visiteur! Votre demande de changement d'adresse email est:",
+ change_mail_2 		=>	"accepté.",
+ change_mail_3 		=>	"Pour modifier votre adresse email sur ce site, vous avez besoin de suivre un lien:",
+ change_mail_4 		=>	"Vous devez êtres connecter pour changer E-mail.",
+ change_mail_5 		=>	"Changement impossible. Vous avez pas demande un changement de Email en ligne.",
+ change_mail_6 		=>	"Votre Email a bien etait change.",
+ news_info_7 		=>	"Les publications ont ete interdites pendant la periode de {days} jours après l inscription sur le site.",
+ news_info_8 		=>	"Vous ne pouvez pas ajouter de commentaires pendant la periode de {days} jours après l inscription sur le site.",
+ vote_not_allow 	=>	"Vous ne pouvez pas voter dans les sondages sur ce site.",
+ add_to_ignore 		=>	"êtes-vous sur que vous souhaitez ajouter lexpediteur a votre liste noire?.",
+ ignore_error 		=>	"Vous ne pouvez pas vous mettre vous meme en liste noire.",
+ ignore_error_1 	=>	"L expéditeur est dej&#224; dans votre liste noire.",
+ ignore_error_2 	=>	"Vous ne pouvez pas mettre les utilisateurs du groupe admin en liste noire.",
+ ignore_ok 			=>	"L'expediteur a etait ajoutee a la liste noire. Vous ne recevrez plus de messages personnels de cet utilisateur. vous pouvez Débloquer un utilisateur, dans votre profil.",
+ del_from_ignore 	=>	"êtes vous sur de vouloir supprimer un utilisateur de votre liste noire?.",
+ del_from_ignore_1 	=>	"Suppression d'un utilisateur a partir de la liste noire.",
+ ignore_del_ok 		=>	"Utilisateur supprime de votre liste noire.",
+ pm_ignored 		=>	"Vous êtes dans la liste noire de ce destinataire. Votre message a cet utilisateur nea pas pu etre envoyer.",
+ add_to_complaint 	=>	"Entrez le texte de votre plainte:",
+ error_complaint_1 	=>	"Vous avez déjà envoye un avis.",
+ error_complaint_2 	=>	"Vous ne pouvez pas envoyer une plainte contre vous.",
+// 9.3
+
+// 9.2
+ newpost_notfound  => "Article non trouver.",
+ all_votes  => "Liste de tous les sondages sur le site:",
+ vote_disable  => "le vote est terminé",
+ vote_disable_1  => "Vous avez déjà participé à ce sondage, ",
+ max_votes  => "Total des votes:",
+ vote_ok  => "Merci. de votre vote.",
+ bb_list_item  => "Enter a list item. To complete, leave it blank.",
+ message_pm_4  => "La Notification sera verifié et publié par un modérateur",
+ message_pm_5  => "a été vérifier par un modérateur:",
+ message_pm_6  => "Celui-ci, vous avez envoyé la notification suivante:",
+ btn_notice  => "Notifié le membre",
+ p_send  => "Envoyer",
+ p_send_ok  => "Envoie de la notification réussis",
+ p_text  => "Entrez le texte de la notification, le membre recevra un message personnel:",
+ p_message  => "Oui, et envoyer une notification",
+// 9.2
+
+// 9.0
+ bb_t_col 			=>	"Couleur:",
+ add_comm 			=>	"Ajouter un commentaire",
+ p_info 			=>	"Info",
+ p_confirm 			=>	"Confirmer",
+ p_prompt 			=>	"Entrer",
+ p_user 			=>	"Utilisateur: ",
+ p_yes 				=>	"Oui",
+ p_no 				=>	"Non",
+ p_enter 			=>	"Entrer",
+ p_cancel 			=>	"Fermer",
+ news_err_42 		=>	"<li>Vous devez avoir une autorisation de administrateur pour modifier votre E-mail ou mot de passe sur le site Web, sinon connectez-vous à l admincp. Ceci est fait pour des raisons de sécurité.</li>",
+ news_err_43 		=>	"Vous ne pouvez pas ajouter des articles",
+ news_err_44 		=>	"vous avez atteint le nombre maximum de posts pour ce jour. vous pourrez ajouter des posts demain!.",
+ bb_t_upload 		=>	"Fichier uploader",
+ message_pm 		=>	"Avis sur les nouveaux articles",
+ message_pm_1 		=>	"Votre news",
+ message_pm_2 		=>	"a été éffacer par un modérateur:",
+ message_pm_3 		=>	"le modérateur à répertorié pour les raisons suivantes:",
+ fav_notfound_1 	=>	"Sur cette page vos signets ne retournerons pas à la page précedente.",
+ pm_err_10 			=>	"Vous ne pouvez pas envoyé plus (max) de messages par jour..",
+ feed_err_9 		=>	"<li>Vous ne pouvez plus envoyés de messages (max) par jour.</li>",
+ edit_selcomb 		=>	"Fusionnée les commentaires",
+ login_err_2 		=>	"Attention, Vous avez atteint le nombre maximum de tentatives infructueuses de connexion au site. Votre accès au compte a été bloqué pendant 20 minutes. Essayez à nouveau de vous connecté au site après le temps ci-dessus. Si vous avez oublié votre mot de passe, Faite une demande pour obtenir nouveau mot de passe. Réinitialiser votre mot de passe aussi juste à la fin de la période de blocage.",
+// 9.0
+
+// rate commentaire
+ comr_self  => "Pour moi, il est impossible", 
+ comr_del  => "Seront supprimés", 
+ comr_hidden  => "Commentaire caché en raison de faibles notes", 
+ comr_hide  => "Seront cachés", 
+ comr_already  => "Vous avez déjà voté sur ce commentaire.", 
+ comr_login  => "Svp connecter vous ou vous inscrire pour voter sur les commentaires.",
+
+// 8.5
+ lost_send 			=>	"Cher visiteur! Selon votre demande a été généré pour vous un nouveau mot de passe. Ce mot de passe a été envoyé à l e-mail:",
+ news_err_40 		=>	"Votre commentaire de texte est trop court. S'il vous plait d exprimer plus de connaitre votre opinion ou un problème, etc",
+ news_err_41 		=>	"Vous n'avez pas le droit de publier des nouvelles dans cette section du site, S'il vous plait choisir une catégorie dans la liste disponible.",
+ edit_selact 		=>	"-- Action --",
+ edit_seldel 		=>	"Supprimé",
+ edit_rel 			=>	"Editer",
+ b_start 			=>	"Start",
+ mass_comments 		=>	"Les commentaires sélectionnés:",
+// 8.5
+
+// 8.3
+ lost_password 		=>	"Pour récupérer votre mot de passe sur le site suivez ce lien:",
+ lost_ip 			=>	"Pour réinitialiser le verrou sur le site IP suivez ce lien:",
+ lost_clear_ip 		=>	"Blocage par IP enlevés",
+ lost_clear_ip_1 	=>	"pour l'utilisateur <b>{username}</b> blocage par IP supprimé avec succès.",
+ lost_mfg 			=>	"Cordialement,\nSite Administration",
+ c_subscribe 		=>	"Abonnez-vous aux commentaires",
+ admin 				=>	"Administrateur",
+ news_err_37 		=>	"Le rapport contient un mot interdit à la publication du texte.",
+ news_err_38 		=>	"Informations sur vous ou votre signature contient un mot interdit à la publication du texte.",
+ news_err_39 		=>	"vos nouvelles contiennent un texte invalide pour la publication.",
+ unsubscribe_ok 	=>	"Vous venez de vous désabonné aux nouvelles sélectionnées.",
+ unsubscribe_err 	=>	"Vous n'êtes pas abonné aux commentaires de ces nouvelles.",
+ nav_trennen 		=>	"...",
+// 8.3
+
+// 8.2
+ thumb_playtitle 	=>	"Voir le diaporama (space)",
+ thumb_pausetitle 	=>	"Pause",
+ thumb_previoustitle 	=>	"Image précédente",
+ thumb_nexttitle 	=>	"Image suivante",
+ thumb_movetitle 	=>	"déplacer l'image",
+ thumb_closetitle 	=>	"Fermer (Esc)",
+ nl_info_2 			=>	"Utilisateur",
+ news_info_6 		=>	"
+Commentaire sur le site de nouvelles n'est possible que dans (days) jours à compter de la date de publication.",
+ search_s_go 		=>	"Aller à la page",
+// 8.2
+
+//8.0
+ feed_err_8 		=>	"<li>Vous ne pouvez pas envoyer un E-Mail Message à cet utilisateur.</li>",
+ bb_flash 			=>	"Entrez la taille de l'animation flash (Largeur, Longeur) ",
+ bb_flash_url 		=>	"Entrez le lien vers l'animation flash",
+ inset_flash_link 	=>	"Ajouter lien Flash",
+
+// 7.5
+ news_err_32 		=>	"<li>Administrateur du site a interdit le chargement des avatars pour votre groupe.</li>",
+ not_allowed_sig 	=>	"<li>signature trop longue!</li>",
+ news_err_33 		=>	"Commentaire publier contient des balises.",
+ news_err_34 		=>	"Information au sujet de vous ou de votre signature à publier contient des balises.",
+ tags_count 		=>	"News trouvées:",
+ news_err_35 		=>	"<li>Le nom complet de la publication contient des caractères!</li>",
+ news_err_36 		=>	"<li>Lieu de résidence aux fins de publication contient des caractères!</li>",
+// 7.5
+
+// 7.3
+ reg_err_30 		=>	"Nom d'utilisateur ne peut pas être vide!",
+ reg_err_31 		=>	"Le mot de passe doit être d'au moins 6 caractères!",
+ reg_err_32 		=>	"les mot de passe doivent être identiques!",
+ reg_err_33 		=>	"Adresse électronique non valide!",
+ rss_user 			=>	"Suivi de toutes les informations sur l'utilisateur RSS",
+ show_archive 		=>	"Voir l ensemble des archives",
+ no_message 		=>	"à l'heure actuelle, vous n'avez pas de messages personnels",
+ spoiler_title 		=>	"Afficher / Masquer le texte",
+// 7.3
+// 7.2
+ news_info_2 		=>	"L Administrateur de l emplacement a interdit laisser des commentaires dans cet emplacement jusqu le <b>{date}</b>. Ce processus de blocus est complètement automatique et n'a pas besoin de faire rien par son accélération ou arrêt.",
+ news_info_3 		=>	"L Administrateur de l emplacement a interdit laisser des commentaires dans cet emplacement.",
+ news_info_4 		=>	"L Administrateur de l emplacement a interdit ajouter des nouvelles dans cet emplacement jusqu le <b>{date}</b>. Ce processus de blocus est complètement automatique et n'a pas besoin de faire rien par son accélération ou arrêt.",
+ news_info_5 		=>	"L Administrateur de l emplacement a interdit ajouter des nouvelles à cet emplacement.",
+ loading     	    =>	"Chargement en cours...",
+ mail_pm 	  		=>  "Nouveau message personnel",
+ sort_main 	  		=>  "Trier les nouvelles par :",
+ sort_by_date 	  	=>  "Date",
+ sort_by_rating 	=>  "Notes",
+ sort_by_read 		=>  "Lectures",
+ sort_by_title 		=>  "Titre",
+ sort_by_comm 		=>  "Commentaires",
+ rules_accept 		=>  "Je suis d accord",
+ rules_decline 		=>  "Je ne suis pas d accord",
+ reg_err_21 		=>	"<li>L Administrateur a interdit d'utiliser ce speudo pour être enregistré{descr}</li>",
+ reg_err_22 		=>	", pour la raison: {descr}",
+ reg_err_23 		=>	"<li>L Administrateur a interdit d'utiliser cet E-Mail pour être enregistré{descr}</li>",
+ reason 			=>  "Spécifier la raison de l'édition:",
+ tag_cloud 			=>  "Tag",
+ last_news 			=>  "Dernières nouvelles",
+ all_tags 			=>  "Voir toutes les étiquettes",
+// 7.2
+
+// 7.0
+ sig_not_allowed 	=>	"Bloquer ce Domaine, permet qu à un certain groupe d'utilisateurs on interdit utiliser des Signatures dans les commentaires.",
+ related_not_found 	=>	"Nouvelles semblables non trouvées.",
+ add_err_9 			=>	"L Administrateur de l emplacement a établi une limite maximale permise de nouvelles aux espoirs de modération. Pour l'instant, il existe un nombre maximal de nouvelles dans l emplacement, qui sont en suspens de révision administrateur. Essayez de publier ses nouvelles plus tard.",
+// 7.0
+
+
+// 6.7
+ news_delnews 		=>	"Supprimer",
+ news_del_ok 		=>	"Les nouvelles choisies par vous ont été supprimés avec succès.",
+// 6.7
+
+// 6.5
+ time_heute 		=>	"Aujourd hui",
+ time_gestern 		=>	"Hier",
+ thumb_expandtitle 	=>	"Clique ici pour agrandir",
+ thumb_restore 		=>	"Clique ici pour fermer",
+ thumb_focustitle 	=>	"Titre",
+ thumb_cancel 		=>	"Annuler",
+ all_user_news 		=>	"Voir tout les articles du membre",
+ show_user_news 	=>	"Voir tout les articles du membre",
+ menu_fnews 		=>	"Pour trouver toutes les artickes",
+ reg_next 			=>	"Suivant",
+ xf_not_notig 		=>	"Optionnel",
+// 6.5
+
+// 6.3
+ no_limit 			=>	"Illimité",
+ title_catalog 		=>	"Catalogue",
+// 6.3
+
+// 6.2
+ s_fsrelate 		=>	"Le plus approprié",
+// 6.2
+
+// 6.0
+ reload_code  	    =>  "Mise à jour du code",
+ news_err_31 		=>	"Votre commentaire est ajouté dans la DataBase. Après vérification du commentaire par l administrateur, il sera publier",
+ bb_t_font 	   		=>	"Police",
+ bb_t_size 	   		=>	"La taille",
+// 6.0
+
+// 5.7
+ mail_news 		    =>	"Un article est en attente de validation.",
+ mail_comments 		=>	"Un nouveau commentaire de site",
+ bb_t_leech 		=>	"ajouter une URL protegée",
+// 5.7
+
+// 5.5
+ s_ffullstart 		=>	"Recherche avancée",
+ user_logged 		=>	"Vous êtes bien identifié",
+// 5.5
+
+// 5.3
+ bb_t_emo 			=>	"Ajouter un smiley",
+ pm_to 				=>	"destinataire",
+ approve 			=>	"(en attente de validation)",
+ ip_info 			=>	"Information à propos des adresses IP ",
+ ip_tools 			=>	"Chercher un utilisateur",
+ ip_ban 			=>	"Ban IP address",
+// 5.3
+
+// 5.2
+'title_team'        =>  "DLE-FR.ORG TEAM FRENCH DLE",
+ bb_t_code         =>    "Insérer Code",
+ title_last        =>    "Commentaires",
+ title_lost        =>    "Recupérer le MDP",
+ title_search      =>    "Chercher",
+ bb_t_video        =>    "Ajouter Video",
+ menu_profile      =>    "Profil",
+ menu_fcomments    =>    "Chercher tout les commentaires",
+ menu_send         =>    "Envoyer Message",
+ menu_uedit        =>    "Administration",
+// 5.2
+
+// v5.1
+ add_err_3 		    =>	"<li>l'article est trop court.</li>",
+ add_err_4 		    =>	"<li>l'article est trop long.</li>",
+ banned_info      	=>	"Illimité",
+ bb_t_translit  	=> 	 "Convertissez le texte choisi de la translittération au Cyrillien",
+ bb_t_code 		    =>	"Inserer un code",
+ confirm_ok 		=>	"Votre E-mail: <b> {email} </b> est confirmé et soumis à l'enregistrement : <b> {login} </b>. Vous pouvez continuer l'enregistrement en cliquant sur le lien.",
+ fav_notfound 		=>	"Vous n'avez pas de favoris.",
+ news_err_30  		=>	"Code de sécurité incorrect.",
+ news_err_8 		=>	"Seul les utilisateurs enregistrés peuvent laisser des commentaires.",
+ poll_failed  		=>	"Vous devriez choisir au moins une réponse pour que nous la prenions en compte.",
+ s_static 			=>	"Recherche dans pages statiques",
+ search_ok_2 		=>	 "Résultats de la recherche",
+
+// v4.5
+ feed_error 		=>	"L'accès au MP pour le groupe d'utilisateur: \"<b>{group}</b>\" est désactivé.",
+ search_title 	    =>	"Recherchez dans ce site",
+ search_ok 		    =>	"Résultats de la recherche",
+ search_denied 		=>	"L'accès pour chercher le groupe d'utilisateur: \"<b>{group}</b>\" est désactivé.",
+ static_denied 		=>	"Désolé vous n'avez pas les droits requis pour affiché cette page.",
+ s_allcat 			=>	"- Cherchez dans toutes les categories -",
+ s_con 			    =>	"Recherchez dans ce site ",
+ s_word 			=>	"Recherche:",
+ s_whint 			=>	"Vous pouvez chercher plus <br> que un mot. L utilisation  OR  pour<br> séparer les mots. Exemple : <br> musique OR chanson OR lyrique... ",
+ s_ncom1 			=>	"commentaires",
+ s_ncall 			=>	"articles et commentaires",
+ s_ncom 			=>	"articles",
+ s_tnews 			=>	"titres",
+ s_xf 			    =>	"Champs supplémentaires",
+ s_nid 			    =>	"par nombre",
+ s_mname 			=>	"Chercher par ",
+ s_fall 			=>	"Trouver des articles ou des commentaires",
+ s_fname 			=>	"Nom d'utilisateur:",
+ s_fgname 		    =>	"Nom exact",
+ s_fart 			=>	"Recherche d articles avec",
+ s_fmin 			=>	"Plus de",
+ s_fmax 			=>	"Moins de",
+ s_wcomm 		    =>	"commentaires",
+ s_fdaten 			=>	"Chercher les articles postés:",
+ s_tall 			=>	"Tout les articles",
+ s_tlast 			=>	"Dernière visite",
+ s_tday 			=>	"Hier",
+ s_tweek 			=>	"Dernière semaine",
+ s_ttweek 			=>	"Dernières 2 semaines",
+ s_tmoth 			=>	"Dernier mois",
+ s_tfmoth 			=>	"Derniers 3 mois",
+ s_tsmoth 			=>	"Derniers 6 mois",
+ s_tyear 			=>	"Dernière année",
+ s_fnew 			=>	"Plus récent que",
+ s_falt 			=>	"Plus vieux que",
+ s_fsoft 			=>	"Classer les résultats de la recherche par",
+ s_fsdate 			=>	"Date",
+ s_fstitle 			=>	"Titre",
+ s_fscnum 			=>	"Nombre de commentaires",
+ s_fsnnum 			=>	"Nombre de lectures",
+ s_fsaut 			=>	"Nom de l auteur",
+ s_fscat 			=>	"Categorie",
+ s_fsrate 			=>	"Note de l'article",
+ s_fsdesc 			=>	"Decroissant",
+ s_fsasc 			=>	"Croissant",
+ s_vlegend 		    =>	"Voir les résultats ",
+ s_vnum 			=>	"Nombre de resultats par pages:",
+ s_vwie 			=>	"Voir les résultats comme:",
+ s_vjump 			=>	"Nombre total de résultats #:",
+ s_vnews 			=>	"articles",
+ s_vtitle 			=>	"titres",
+ s_fcats 			=>	"Catégories de recherche ",
+ s_fstart 			=>	"Rechercher",
+ s_fstop 			=>	"Vider",
+ s_freset 			=>	"Arrière",
+
+ i_quote 			=>	"Citation: ",
+
+ news_err_id 		=>	"L ID de l'article n'a pas été paramétré.",
+ comm_req_f         =>  "Vérifiez toutes les zones requises",
+ ip_block           =>  "Vous n'avez pas le droit d accéder au site.",
+ ip_block_login 	=>	"Accès refusé.",
+ mod_list_f 		=>	"La boite d envoi est vide.",
+
+ pm_alert 			=>	"Bonjour <b> {user} </b>Vous avez re&ccedil;u <b> {num} </b> nouveau(x) message(s). ",
+ pm_asub 			=>	"Sujet:",
+ pm_atitle 			=>	"Nouveau MP!",
+ pm_mtitle 		    =>	"Utiliser le click and drag pour bouger la fenêtre ",
+ pm_aread 		    =>	"Lire MP ",
+ pm_close 			=>	"Fermer",
+ att_dcount 		=>	"Compter: ",
+ att_denied 		=>	"Seul les utilisateurs enregistrés peuvent Uploader des fichiers.",
+
+ banned_info 		=>	"Accès illimité",
+ fav_error 			=>	"Seuls les utilisateurs enregistrés peuvent accéder à cette section.",
+
+ aj_allowbr   		=>	"Auto line breaks",
+ pm_selall 			=>	"Tout selectionner ",
+ b_del 			    =>	"Supprimer les selectionnés ",
+ last_comm 		    =>	"Voir les derniers commentaires",
+ err_last 			=>	"Pas de commentaire ",
+
+ top_name 		    =>	"Nom",
+ top_status 		=>	"Groupe de l'utilisateur",
+ top_reg 			=>	"Date d inscription",
+ top_last 			=>	"Dernière visite ",
+ top_nnum 		    =>	"Articles",
+ top_cnum 		    =>	"Commentaires",
+ top_pm 			=>	"Envoyer MP",
+
+ use_ajax_edit      		 =>          "êtes vous sûr de vouloir éditer l'article?",
+ ajax_comm_edit     		 =>          "êtes vous sûr de vouloir éditer le commentaire?",
+ ajax_info          		 =>          "En cours. veuillez patienter... ",
+ menu_short         		 =>          "Edition rapide",
+ menu_full          		 =>          "Edition complète",
+
+
+ addnews_allow_rate =>	"Autoriser la notation de l'article",
+ sec_image 		    =>	"Include security image CAPTCHA.",
+ reg_err_19 		=>	"<li>Le code de sécurité est incorrect. </li>",
+ reg_err_20 		=>	"<li> Ce nom est déjà utilisé. </li>",
+ reg_ok_ajax 		=>	"Disponible",
+
+ news_page_err 		=>	"La page demandée n as pas été trouvée.",
+ bb_t_up 			=>	"Uploader un fichier",
+ bb_b_up 			=>	"uploading",
+ next_moth 		    =>	"Mois prochain",
+ prev_moth 		    =>	"Mois dernier ",
+ cal_post 			=>	"Article posté dans",
+ title_users 		=>	"Utilisateurs",
+ title_new 			=>	"Non lus",
+ title_date 		=>	"Article de",
+ title_stats 		=>	"Statistiques",
+ title_addnews 		=>	"Proposer un article",
+ title_register 	=>	"Membre enregistré",
+ title_fav 			=>	"Mes favoris",
+ title_pm 			=>	"Messages personnels",
+ title_feed 		=>	"Contactez nous",
+ title_year 		=>	"Année",
+ title_year1 		=>	"Année",
+
+ vote_set 			=>	"Vote",
+ vote_result 		=>	"Résultats",
+ excellent 			=>	"Excellent",
+ good 			    =>	"Bon",
+ fair 			    =>	"Moyen",
+ poor 			    =>	"Faible",
+ useless 			=>	"Mauvais",
+ raten 			    =>	"Notes actuelles: ",
+ noraten 			=>	"Pas de votes",
+ rated 			    =>	"Note de l'article:",
+ voten 			    =>	"Votes #: ",
+ rdenied 			=>	"Merci d avoir voté.",
+ yrate 			    =>	"Selectionnez une note: ",
+ entrat 			=>	"Note",
+
+ unorat 			=>	"Non noté",
+ urated 			=>	"noté par",
+ templ_err_1 		=>	"Template",
+ templ_err_2 		=>	"Absent. vérifier l'orthographe.",
+
+ all_info 			=>	"Information",
+ all_prev 			=>	"Retour",
+ all_err 			=>	"Votre navigateur ne supporte pas le JAVASCRIPT.",
+ all_err_1 			=>	"Une erreur a été rencontrée!",
+
+ reg_err_1 		=>	"<li> Les deux mots de passe doivent être identiques! </li> ",
+ reg_err_2 		=>	"<li> La longueur du mot de passe doit être comprise entre 6 et 16 caractères! </li> ",
+ reg_err_3 		=>	"<li> La longueur d un nom ne peut excéder 20 caractères! </li> ",
+ reg_err_4 		=>	"<li> Ce nom ne peux être utilisé pour s enregistrer! </li> ",
+ reg_err_5 		=>	"<li> Mot de passe incorrect! </li> ",
+ reg_err_6 		=>	"<li>l addresse E-mail est incorrecte! </li> ",
+ reg_err_7 		=>	"<li> La zone du nom d'utilisateur ne peux être vide! </li> ",
+ reg_err_8 		=>	"<li> Nom d'utilisateur ou E-mail déjà utilisé! </li> ",
+ reg_err_9 		=>	"Nous sommes désolés mais nous n acceptons plus d inscription d'utilisateur.",
+ reg_err_10 		=>	"Le site a atteint sa capacité maximum. Essayez plus tard!!",
+ reg_err_11 		=>	"Une erreur a été rencontrée durant l'enregistrement",
+ reg_err_12 		=>	"<li>Erreur d upload de l image. </li> ",
+ reg_err_13 		=>	"<li>Vous pouvez uploader des fichiers avec comme extension JPG ou PNG seulement. </li>",
+ reg_err_14 		=>	"<li>Votre texte ici! </li> ",
+ reg_err_15 		=>	"<li>Le nom est trop long! </li> ",
+ reg_err_16 		=>	"<li>Nom invalide! </li> ",
+ reg_err_17 		=>	"<li>Numéro ICQ invalide! </li> ",
+ reg_err_18 		=>	"Attention! Une erreur a été rencontrée",
+ reg_ok 			=>	"Enregistrment complet.",
+ reg_ok_1 			=>	"Merci de vous être enregistré. Votre compte est activé et est prêt à être utilisé!",
+
+ reg_subj 		=>	"Activation du compte",
+ reg_vhead 		=>	"La demande d activation du compte a été envoyée.",
+ reg_vtext 		=>	"Merci de vous être enregistré sur notre site. <br> <br> Un email de confirmation a été envoyé à l adresse que vous avez utilisé pour vous enregistrer. lorsque vous recevrez ce message, ouvrez le et cliquez sur le lien de confirmation.",
+
+ add_err_1 		=>	"<li> La boite de titre ne peut pas être vide </li> ",
+ add_err_2 		=>	"<li> Le titre est trop long.</li>",
+ xfield_xerr1 		=>	"<li> Tous les champs sont obligatoires. </li> ",
+ add_err_5 		=>	"<li> Le champ court article doit contenir du texte</li> ",
+ add_err_6 		=>	"Une erreur s est produite",
+ add_err_7 		=>	"votre article doit avoir un titre et une description.",
+ add_err_8 		=>	"Seuls les utilisateurs enregistrés peuvent publier des articles.",
+ add_err_9      => "Ce sujet à déja etait poster; Les doubles posts sont interdit !",
+ add_ok 			=>	"l'article a été soumis",
+ add_ok_1 		=>	"Merci de nous envoyer l'article!",
+ add_ok_2 		=>	"Merci de nous envoyer l'article! Il a été mis en attente de validation.",
+ add_ok_3 		=>	"Merci d avoir soumis nouvelles! Il a été mis en attente de validation.",
+ add_noch 		=>	"Ajouter plus",
+ add_or 		=>	"ou",
+ add_al_com 	=>	"Autoriser les commentaires ",
+ add_al_m 		=>	"Voir la page principale",
+ add_al_ap 		=>	"Publier l'article",
+ add_al_fix 	=>	"l'article Pin ",
+
+ bb_url 			=>	"Entrer l URL complete",
+ bb_page 			=>	"Entrer le numéro de page",
+ bb_url_name 		=>	"Entrer le nom du site ",
+ bb_page_name 		=>	"Entrer la description du lien",
+ bb_image 		    =>	"Entrer l URL complète vers les images ",
+ bb_email 			=>	"Entrer l adresse E-mail",
+ bb_code 			=>	"Exemple: [CODE] votre texte ici [/CODE] ",
+ bb_quote 			=>	"Exemple: [QUOTE votre citation ici  [/QUOTE] ",
+ bb_no_url 		    =>	"Entrer l URL",
+ bb_no_title 		=>	"Donner titre à l'article.",
+ bb_no_email 		=>	"Entrer une adresse email.",
+ bb_prompt_start 		=>	"Entrer un texte à formater",
+ bb_img_title 		=>	"Alignement de l image (gauche, centrer, droite)",
+ bb_email_title 		=>	"Réference (option)",
+ bb_b_center 		=>	"centrer ",
+ bb_b_quote 		=>	"Citer",
+ bb_b_left 			=>	"Gauche",
+ bb_b_right 		=>	"Droite",
+ bb_bb_page 		=>	"Page",
+ bb_b_color 		=>	"Couleur",
+ bb_b_blue 		    =>	"Bleu",
+ bb_b_red 			=>	"Rouge",
+ bb_b_purple 		=>	"Violet",
+ bb_b_orange 		=>	"Orange",
+ bb_b_yellow 		=>	"Jaune",
+ bb_b_gray 		    =>	"Gris",
+ bb_b_green 		=>	"Vert",
+ bb_b_close 		=>	"Tout fermer",
+ bb_b_url 			=>	"Réference",
+ bb_b_img 		    =>	"insérer une image",
+ bb_b_mail 		    =>	"E-mail",
+ bb_b_break 		=>	"page break",
+ bb_b_page 		    =>	" Réference à la page ",
+ bb_t_b 			=>	"Gras",
+ bb_t_i 			=>	"italique ",
+ bb_t_u 			=>	"souligné ",
+ bb_t_s 			=>	"barré",
+ bb_t_l 			=>	"aligner à gauche",
+ bb_t_c 			=>	"centrer ",
+ bb_t_r 			=>	"aligner à droite",
+ bb_t_cl 			=>	"Fermer tout les tags ",
+ bb_t_url 			=>	"insérer un lien",
+ bb_t_img 			=>	"insérer une image ",
+ bb_t_hide 		    =>	"texte caché ",
+ bb_t_quote 		=>	"insérer un commentaire ",
+ bb_t_code		    =>	"Insérez le code",
+ bb_t_m 			=>	"insérer un E-mail ",
+ bb_t_br 			=>	"page break",
+ bb_t_p 			=>	"faire une réference à une page ",
+ bb_b_cancel 		=>	"Annuler",
+ bb_t_cancel 		=>	"Supprimer l'édition et restaurer les paramètres par defaut.",
+ bb_b_apply 		=>	"Envoyer",
+ bb_t_apply 		=>	"Appliquer",
+
+ comm_err_1 		=>	"Les commentaires ne sont disponibles que pour les utilisateurs enregistrés.",
+ comm_err_2 		=>	"Une erreur a été rencontrée",
+ comm_err_3 		=>	"Vous ne pouvez éditer des commentaires.",
+ comm_err_4 		=>	"Vous ne pouvez supprimer des commentaires.",
+ comm_err_5 		=>	"L action demandée est invalide. Choisissez d abord un commentaire.",
+
+ comm_ok 		    =>	"Votre requête a été exécutée.",
+ comm_ok_1 		    =>	"Le commentaire a bien été modifié.",
+ comm_ok_2 		    =>	"Le commentaire a bien été effacé. ",
+ comm_title 		=>	"Editer le commentaire",
+
+ login_err 			=>	"Erreur d autorisation",
+ login_err_1 		=>	"Nom d'utilisateur ou Mot De Passe incorrect. ",
+
+ search_err_1 		=>	"Trop de résultats. Veuillez préciser votre recherche.",
+ search_err_2 		=>	"La recherche n'a retourné aucun résultat.",
+ search_err_3 		=>	"Vous avez entré moins de 4 caractères!", 
+ search_ok 		    =>	"Résultat de la recherche:",
+ search_ok_1 		=>	"articles",
+
+
+ lost_npass 		=>	"A votre demande, un nouveau MDP a été généré. Utilisez le: ",
+ lost_login 		=>	"Nom d'utilisateur:",
+ lost_pass 			=>	"Mot de passe: ",
+ lost_info 			=>	"You can change your password after authorization is complete.",
+ lost_gen 			=>	"Un nouveau mot de passe va être généré.",
+ lost_err 			=>	"La reference a expiré.",
+ lost_subj 			=>	"Retrouver son MDP perdu ",
+ lost_ms 			=>	"Un message vous a été envoyé.",
+ lost_ms_1 		    =>	"Tout les mot de passes sont cryptés et ne peuvent être recupérés. Vous recevrez un e-mail avec des instructions à l adresse que vous avez utilisé pour vous enregistrer. Si ca ne resout pas votre probleme contactez le webmaster en utilisant le formulaire de contact.",
+ lost_err_1 		=>	"l'utilisateur n'a pas été trouvé dans la BDD ",
+
+ news_err_1 		=>	"le nom que vous avez entré est trop long.",
+ news_err_2 		=>	"l adresse E-mail est trop longue. ",
+ news_err_3 		=>	" votre commentaire est trop long. ",
+ news_err_4 		=>	"La protection contre le flood est activée!",
+ news_err_5 		=>	"Vous pourrez poster un commentaire dans",
+ news_err_6 		=>	"secondes",
+ news_err_7 		=>	"Vous avez entré le nom d un utilisateur enregistré. Si vous êtes cet utilisateur, enregistrez vous d abord.",
+ news_err_9 		=>	"Le nom d'utilisateur ne peux etre vide.",
+ news_err_10 		=>	"URL ou E-mail invalide.",
+ news_err_11 		=>	"Le commentaire ne peux être vide.",
+ news_err_12 		=>	"l'article n'a pu être trouvé. L URL de l'article a probablement changé. Utilisez la recherche.",
+ news_err_13 		=>	" <li>Vous ne pouvez accéder au profil de cet utilisateur.</li> ",
+ news_err_14 		=>	"<li> Une erreur à été rencontrée! </li> ",
+ news_err_15 		=>	" <li> Uploader des images aves comme extension JPG ou PNG. </li>",
+ news_err_16 		=>	" <li> La taille maximum des fichiers uploadé ne peux exceder 100Kb. </li> ",
+ news_err_17 		=>	" <li> Mot de passse incorrect! </li> ",
+ news_err_18 		=>	" <li> Les deux mots de passes doivent être identiques. </li> ",
+ news_err_19 		=>	"<li> Votre mot de passe doit contenir entre 6 et 16 caractères. </li> ",
+ news_err_20 		=>	" <li> Vous utilisez un mot de passe interdit! </li> ",
+ news_err_21 		=>	" <li> Adresse E-mail incorrecte! </li> ",
+ news_err_22 		=>	" <li>Veuillez raccourcir votre BIO SVP.</li> ",
+ news_err_23 		=>	" <li> Votre nom est trop long! </li> ",
+ news_err_24 		=>	"<li> Le nom du lieu est trop long! </li> ",
+ news_err_25 		=>	"<li> Le numero ICQ est trop long! </li> ",
+ news_err_26 		=>	"l'utilisateur n existe pas.",
+ news_err_27 		=>	"Aucun article trouvé ou vous n y avez pas accés.",
+ news_err_28 		=>	"Vous n'avez pas accés à cette partie du site enregistrer vous .",
+ news_err_29 		=>	"Les commentaires ont été désactivés pour cet article.",
+
+ feed_err_1 		=>	"<li>Entrez votre nom. </li> ",
+ feed_err_2 		=>	"<li>Entrez votre E-mail. </li> ",
+ feed_err_3 		=>	"<li>Adresse E-mail incorrecte... </li> ",
+ feed_err_4 		=>	"<li>Entrez le suhet du message... </li> ",
+ feed_err_5 		=>	"<li>Pas de texte dans votre message. </li> ",
+ feed_err_6 		=>	"Votre message ne peux être envoyé. ",
+ feed_err_7 		=>	"Ce membre ne veux pas recevoir d email ou n existe pas.",
+
+ feed_ok_1 		=>	"Le message a bien été envoyé",
+ feed_ok_2 		=>	"Votre message a",
+ feed_ok_3 		=>	"a bien été envoyé.",
+ feed_ok_4 		=>	"Page d acceuil ",
+
+ user_mem 		=>	"Membre",
+ user_ed 		=>	"Editeur",
+ user_re 		=>	"Modérateur",
+ user_adm 		=>	"Administrateur",
+ user_ban 		=>	"Bannis",
+
+ news_next 		=>	">> Suivant",
+ news_prev 		=>	"Pécédent <<",
+ news_site 		=>	"page",
+ news_iz 		=>	"-of-",
+ news_delcom 	=>	"êtes vous sûr de vouloir effacer ce commentaire?",
+ news_regus 	=>	"Vous devez vous enregistrer avant de lire ce commentaire.",
+ news_info_1 	=>	"Les membres de <b>{group}</b> ne peuvent laisser de commentaires.",
+ news_mail 		=>	"Envoyer un E-MAIL ",
+ news_nomail 	=>	"E-mail caché",
+ news_noamail 	=>	"Cacher l e-mail",
+ news_option 	=>	"Editer le profil",
+ news_addfav 	=>	"Ajouter aux favoris",
+ news_minfav 	=>	"Retirer des favoris ",
+ news_addcom 	=>	"Ajouter commentaire",
+ news_pmnew 	=>	"Envoyer MP",
+
+ pm_err_1 		=>	"Vous n'avez pas accès à la messagerie personnelle.",
+ pm_err_2 		=>	"<li> Tout les champs doivent être remplis. </li> ",
+ pm_err_3 		=>	"<li> Le sujet est trop long. </li> ",
+ pm_err_4 		=>	"<li> Le destinataire n existe pas.</li> ",
+ pm_err_8 		=>	"<li>Erreur! La boite MP du destinataire est pleine! </li> ",
+ pm_err_5 		=>	"Impossible d effacer les MP! Soit vous n'avez pas selectionné de MP soit vous n'avez pas l autorisation de le faire.",
+ pm_err_6 		=>	"Erreur! Ce numero de message n existe pas.",
+ pm_err_7 		=>	"Accès interdit.",
+ pm_err_9 		=>	"Votre boite MP est pleine. Veuillez effacer vos anciens messages pour liberer de la place.",
+
+ pm_sendok 		=>	"Le message as été envoyé.",
+ pm_confirm 	=>	"êtes vous sûr de vouloir effacer ce message?",
+ pm_noch 		=>	"Envoyer d autres messages ",
+ pm_main 		=>	"revenir a l acceuil",
+ pm_or 			=>	"ou",
+ pm_delok 		=>	"Les messages ont été effacés. ",
+ pm_subj 		=>	"Sujet ",
+ pm_from 		=>	"Expediteur",
+ pm_date 		=>	"Date",
+ pm_action 		=>	"Action? ",
+ pm_del 		=>	"Effacer",
+
+);
+
+
+
+////////////
+// Ð›Ð¾ÐºÐ°Ð»Ð¸Ð·Ð°Ñ†Ð¸Ñ Ð´Ð»Ñ Ð´Ð°Ñ‚Ñ‹
+$langdate = array (
+ January 		=>	"Janvier",
+ February 		=>	"Fevrier",
+ March 			=>	"Mars",
+ April 			=>	"Avril",
+ May 			=>	"Mai",
+ June 			=>	"Juin",
+ July 			=>	"Juillet",
+ August 		=>	"Aout",
+ September 		=>	"Septembre",
+ October 		=>	"Octobre",
+ November 		=>	"Novembre",
+ December 		=>	"Decembre",
+
+ Jan 			=>	"Jan",
+ Feb 			=>	"Fev",
+ Mar 			=>	"Mar",
+ Apr 			=>	"Avr",
+ May 			=>	"Mai",
+ Jun 			=>	"Jun",
+ Jul 			=>	"Jul",
+ Aug 			=>	"Aou",
+ Sep 			=>	"Sep",
+ Oct 			=>	"Oct",
+ Nov 			=>	"Nov",
+ Dec 			=>	"Dec",
+
+ Sunday 			=>	"Dimanche",
+ Monday 			=>	"Lundi",
+ Tuesday 			=>	"Mardi",
+ Wednesday 		    =>	"Mercredi ",
+ Thursday 			=>	"Jeudi",
+ Friday 			=>	"Vendredi",
+ Saturday 			=>	"Samedi",
+
+ Sun 			=>	"Dim",
+ Mon 			=>	"Lun",
+ Tue 			=>	"Mar",
+ Wed 			=>	"Mer",
+ Thu 			=>	"Jeu",
+ Fri 			=>	"Ven",
+ Sat 			=>	"Sam",
+
+);
+
+//////////////French Calendar
+
+$f = array ( Janvier ,  Fevrier ,  Mars ,  Avril ,  Mai ,  Juin ,  Juillet ,  Aout ,  Septembre ,  Octobre ,  Novembre ,  Decembre );
+$f2 = array( 01 ,  02 ,  03 ,  04 ,  05 ,  06 ,  07 ,  08 ,  09 ,  10 ,  11 ,  12 );
+$f3 = array( Jan ,  Fev ,  Mar ,  Avr ,  Mai ,  Jun ,  Jul ,  Aou ,  Sep ,  Oct ,  Nov ,  Dec );
+$r = array ( Janvier ,  Fevrier ,  Mars ,  Avril ,  Mai ,  Juin ,  Juillet ,  Aout ,  Septembre ,  Octobre ,  Novembre ,  Decembre );
+
+////////////
+// Localization transliteration
+$langtranslit = array(
+'Ð°' => 'a', 'Ð±' => 'b', 'Ð²' => 'v',
+'Ð³' => 'g', 'Ð´' => 'd', 'Ðµ' => 'e',
+'Ñ‘' => 'e', 'Ð¶' => 'zh', 'Ð·' => 'z',
+'Ð¸' => 'i', 'Ð¹' => 'y', 'Ðº' => 'k',
+'Ð»' => 'l', 'Ð¼' => 'm', 'Ð½' => 'n',
+'Ð¾' => 'o', 'Ð¿' => 'p', 'Ñ€' => 'r',
+'Ñ' => 's', 'Ñ‚' => 't', 'Ñƒ' => 'u',
+'Ñ„' => 'f', 'Ñ…' => 'h', 'Ñ†' => 'c',
+'Ñ‡' => 'ch', 'Ñˆ' => 'sh', 'Ñ‰' => 'sch',
+'ÑŒ' => '', 'Ñ‹' => 'y', 'ÑŠ' => '',
+'Ñ' => 'e', 'ÑŽ' => 'yu', 'Ñ' => 'ya',
+"Ñ—" => "yi", "Ñ”" => "ye",
+
+'Ð' => 'A', 'Ð‘' => 'B', 'Ð’' => 'V',
+'Ð“' => 'G', 'Ð”' => 'D', 'Ð•' => 'E',
+'Ð' => 'E', 'Ð–' => 'Zh', 'Ð—' => 'Z',
+'Ð˜' => 'I', 'Ð™' => 'Y', 'Ðš' => 'K',
+'Ð›' => 'L', 'Ðœ' => 'M', 'Ð' => 'N',
+'Ðž' => 'O', 'ÐŸ' => 'P', 'Ð ' => 'R',
+'Ð¡' => 'S', 'Ð¢' => 'T', 'Ð£' => 'U',
+'Ð¤' => 'F', 'Ð¥' => 'H', 'Ð¦' => 'C',
+'Ð§' => 'Ch', 'Ð¨' => 'Sh', 'Ð©' => 'Sch',
+'Ð¬' => '', 'Ð«' => 'Y', 'Ðª' => '',
+'Ð­' => 'E', 'Ð®' => 'Yu', 'Ð¯' => 'Ya',
+"Ð‡" => "yi", "Ð„" => "ye",
+);
+
+$relates_word = array ('e' => '[eÐµÑ‘]', 'r' => '[rÐ³]', 't' => '[tÑ‚]', 'y' => '[yÑƒ]','u' => '[uÐ¸]','i' => '[i1l!]','o' => '[oÐ¾0]','p' => '[pÑ€]','a' => '[aÐ°]','s' => '[s5]','w' => 'w','q' => 'q','d' => 'd','f' => 'f','g' => '[gÐ´]','h' => '[hÐ½]','j' => 'j','k' => '[kÐº]','l' => '[l1i!]','z' => 'z','x' => '[xÑ…%]','c' => '[cÑ]','v' => '[vuÐ¸]','b' => '[bÐ²ÑŒ]','n' => '[nÐ¿Ð»]','m' => '[mÐ¼]','Ð¹' => '[Ð¹Ð¸u]','Ñ†' => 'Ñ†','Ñƒ' => '[Ñƒy]','Ðµ' => '[ÐµeÑ‘]','Ð½' => '[Ð½h]','Ð³' => '[Ð³r]','Ñˆ' => '[ÑˆwÑ‰]','Ñ‰' => '[Ñ‰wÑˆ]','Ð·' => '[Ð·3Ñ]','Ñ…' => '[Ñ…x%]','ÑŠ' => '[ÑŠÑŒ]','Ñ„' => 'Ñ„','Ñ‹' => '(Ñ‹|ÑŒ[i1l!]?)','Ð²' => '[Ð²b]','Ð°' => '[Ð°a]','Ð¿' => '[Ð¿n]','Ñ€' => '[Ñ€p]','Ð¾' => '[Ð¾o0]','Ð»' => '[Ð»n]','Ð´' => 'Ð´','Ð¶' => 'Ð¶','Ñ' => '[Ñ3Ð·]','Ñ' => '[Ñ]','Ñ‡' => '[Ñ‡4]','Ñ' => '[Ñc]','Ð¼' => '[Ð¼m]','Ð¸' => '[Ð¸uÐ¹]','Ñ‚' => '[Ñ‚t]','ÑŒ' => '[ÑŒb]','Ð±' => '[Ð±6]','ÑŽ' => '(ÑŽ|[!1il][oÐ¾0])','Ñ‘' => '[Ñ‘Ðµe]','1' => '[1il!]','2' => '2','3' => '[3Ð·Ñ]','4' => '[4Ñ‡]','5' => '[5s]','6' => '[6Ð±]','7' => '7','8' => '8','9' => '9','0' => '[0Ð¾o]','_' => '_','#' => '#','%' => '[%x]','^' => '[^~]','(' => '[(]',')' => '[)]','=' => '=','.' => '[.]','-' => '-','[' => '[\[]');
+
+@setlocale(LC_ALL, array("fr_FR.UTF8"));
+
+?>

@@ -1,0 +1,344 @@
+<?php
+
+$help_sections['templates'] = <<<HTML
+<table width="100%">
+    <tr>
+        <td bgcolor="#EFEFEF" height="29" style="padding-left:10px;"><div class="navigation">Template</div></td>
+    </tr>
+</table>
+<div class="unterline"></div>
+Les modèles sont utilisés pour changer facilement l'affichage des nouvelles. Vous pouvez modifier les différentes parties du modèle utilisé pour afficher diverses pièces de nouvelles. Par exemple, une partie du modèle de Résumé est utilisé pour modifier l'apparence de nouvelles active, "L'article complet est de changer le regard de l'article complet, "Commentaire" pour changer la vue et les commentaires, etc <br>
+Lors de l'édition parties du modèle que vous pouvez utiliser du HTML, de modifier les différentes structures, etc Vous aurez aussi besoin d'ajouter quelques symboles spéciaux dans vos modèles afin de déterminer ou il sera montré le nom des nouvelles, le nom de l'auteur, date, etc Chaque partie du motif correspond à  une désignation spécifique. <br>
+Les valeurs des variables peuvent être consultés sur les modèles d'édition quand vous cliquez sur le nom du modèle. Par exemple  <b>{title}</b> affichera le titre de l'article, <b>{author}</b> l'auteur, etc<br><br>
+Vous pouvez utiliser plusieurs modèles différents.
+HTML;
+
+$help_sections['xfields'] = <<<HTML
+<table width="100%">
+    <tr>
+        <td bgcolor="#EFEFEF" height="29" style="padding-left:10px;"><div class="navigation">Champs supplémentaires (xfield)</div></td>
+    </tr>
+</table>
+<div class="unterline"></div>
+Activer des champs supplémentaires dans le menu Réglages &gt; <a href=?mod=xfields&xfieldsaction=configure>Champs supplémentaires</a>. Cette fonction est utile lorsque vous publiez avec l'article, par exemple, les références à  la source d'origine.<br>
+Ajouter un nouveau champ en cliquant sur le lien "<a href=?mod=xfields&xfieldsaction=configure&xfieldssubaction=edit&xfieldsindex=1.5>Le nouveau champ</a>". Sur la page suivante, vous devez entrer un nom unique pour le champ, le champ de description et le contenu du champ par défaut. En outre, vous devez choisir si vous souhaitez utiliser les champs comme vous le souhaitez. C'est, Si vous voulez utiliser n'importe quel article n'est pas un champ optionnel, vous laissez le champ vide si vous ajoutez/édition les nouvelles et le module ne sera pas inclus.<br><br>
+Pour utiliser le champ sur la page avec les nouvelles vous devez ajouter une variable au modèle <b>[xfvalue_X]</b>, ou <b>X</b> - valeur du champ (nommer parce que vous avez entré lors de l'ajout d'un nouveau champ). Vous pouvez également utiliser plusieurs <b>[xfgiven_X]...[/xfgiven_X]</b>, qui affiche le texte spécifié dans le champ supplémentaire s'ils ont été donnés. Et vous pouvez également utiliser plusieurs <b>[xfnotgiven_X]...[/xfnotgiven_X]</b>, qui affiche le texte spécifié dans le champ supplémentaire si ils n'ont pas été précisé.<br><br>
+Exemple de champs:
+<div class="code">
+<b>1)</b>- Titre: stit<br>
+&nbsp;&nbsp;- Description: Source d'information<br>
+&nbsp;&nbsp;- La valeur par défaut: MOI<br>
+&nbsp;&nbsp;- Si vous le souhaitez: Oui<br>
+<b>2)</b>- Titre: source<br>
+&nbsp;&nbsp;- Description: Référence à  la source de l'information<br>
+&nbsp;&nbsp;- La valeur par défaut: http://dle-fr.org/<br>
+&nbsp;&nbsp;- Si vous le souhaitez: Oui<br><br>
+[xfgiven_source]Source - &lt;a href=[xfvalue_source] target=_blank&gt;[xfvalue_stit]&lt;/a&gt;.[/xfgiven_source]<br>
+[xfnotgiven_source]la source n'est pas spécifié[/xfnotgiven_source]</div>
+Si le champ a été donnée dans la publication, le résultat du travail sera le suivant code HTML:
+<div class="code">Source - &lt;a href=http://dle-fr.org/ target=_blank&gt;MOI&lt;/a&gt;.</div>
+Si la source n'a pas été précisé, le résultat sera:
+<div class="code">la source n'est pas spécifié</div>
+Rappelez-vous que les noms de champs peuvent utiliser uniquement des lettres et des chiffres.
+<meta name="generator" content="Namo WebEditor v4.0">
+<div style="text-align: center;">
+    <p align="center"><img src="http://www.dle-fr.org/uploads/posts/2011-12/Dle-Fr.Org_1319259341_customfield.png" width="250" height="55" border="0"></div>
+<p align="center"><br />
+Dans ce tutoriel nous allons ajouter des Champs supplémentaires (xfields) <br />
+A quoi peut servir les xfields ?<br />
+Les champs personnalisés, parfois appelée &quot;Champs supplémentaires&raquo; ou &laquo;xfields&quot;, est un plugins spécial DataLife Engine, quand vous postez quelque chose sur votre site, vous avez des champs pour vous et vos membres pour ajouter des articles, cependant, vous pouvez créer d'autres champs et saisir des informations, comme un lien vers la source ou le programme,&nbsp; vous pouvez ajouter autant de champs spécifiques selon&nbsp; les informations dont vous avez besoin pour votre site web, vous n'avez aucune limitation et vous pouvez préciser toute sortes d'informations que vous voulez et vous aurez un contr&ocirc;le complet de vos conceptions de théme de site pour un rendu comme vous le souhaitez, aussi le champ personnalisé est consultable par le module de recherche au sein de DLE et la fonction de recherche OpenSearch et bien d'autres comme des modules comme Cloud Search ou la recherche récente qui est une&nbsp; fonction merveilleuse&nbsp; dans DLE, la structure du champ personnalisé est enregistré dans un simple fichier texte (. txt) appelé &quot;xfields.txt&raquo; qui ce trouve dans le dossier /engine/data/ et vous pouvez éditer, modifier, supprimer et réorganiser les champs ... <br />
+<br />
+1: Go on commence direction le panneau d'administration<br />
+<br />
+
+<br />
+
+<div style="text-align: center;">
+    <p align="center"><img src="http://www.dle-fr.org/uploads/posts/2011-12/Dle-Fr.Org_fields1.jpg" width="735" height="420" border="0"></div>
+<p align="center"><br />
+<br />
+
+<div style="text-align: center;">
+    <p align="center"><img src="http://www.dle-fr.org/uploads/posts/2011-12/Dle-Fr.Org_fields2.jpg" width="832" height="375" border="0"></div>
+<p align="center"><br />
+<br />
+
+<div style="text-align: center;">
+    <p align="center"><img src="http://www.dle-fr.org/uploads/posts/2011-12/Dle-Fr.Org_fields3.jpg" width="819" height="399" border="0"></div>
+<p align="center"><br />
+<b>Dans nom du champ:</b> mettre megaupload (Megaupload est utiliser pour le tuto aprés le tutoriel vous pouvez mettre ce que vous voulez). <br />
+<b>Description:</b> Liens megaupload (Megaupload est utiliser pour le tuto aprés ce tutoriel vous pouvez mettre ce que vous voulez).<br />
+<b>Voir dans la catégorie:</b> Pour le tutoriels j'ai choisis d'afficher le fields que dans la catégorie modules. Mais &agrave; vous de choisir selon vos catégories, ou vous voulez que le xfields apparaisse. <br />
+<b>Type de champs:</b> Pour le tutoriel on utilise text field (Aprés le tuto ce que vous voulez (pour le fields list il faut entrer un mot par ligne)menu déroulant.<br />
+<b>Texte par defaut:</b> Ne rien inscrire.<br />
+<b>Facultative:</b> Coché Pour le tutoriel (Si&nbsp; décoché l'utilisateur est obliger d'entrer du texte au fields). <br />
+<b>Sauvegarder</b><br />
+
+<div style="text-align: center;">
+    <p align="center"><img src="http://www.dle-fr.org/uploads/posts/2011-12/Dle-Fr.Org_fields4.jpg" width="814" height="396" border="0"></div>
+<p align="center"><br />
+<br />
+
+<div style="text-align: center;">
+    <p align="center"><img src="http://www.dle-fr.org/uploads/posts/2011-12/Dle-Fr.Org_fields5.jpg" width="821" height="388" border="0"></div>
+<p align="center"><br />
+Maintenant rendez vous sur ajouter un article (add news)<br />
+
+<div style="text-align: center;">
+    <p align="center"><img src="http://www.dle-fr.org/uploads/posts/2011-12/Dle-Fr.Org_fields7.png" width="859" height="1404" border="0"></div>
+<p align="center"><br />
+<br />
+Récapitulative nous avons créé un fields nommé <b>megaupload</b><br />
+la balise sera donc<br />
+[code][xfvalue_megaupload][/code]<br />
+xfvalue= xfields<br />
+&nbsp;<br />
+<br />
+<b>inséré l'un de c'est code la ou vous voulez que le champs apparaisse dans fullstory.tpl et ou&nbsp; shortory.tpl </b><br />
+<br />
+version texte<br />
+[code][xfvalue_megaupload][/code]<br />
+cette balise affiche le texte ou url entrer dans ajouter un article (addnews)<br />
+<br />
+<br />
+Version lien intégré dans une image centrer<br />
+<span style="color: rgb(0, 78, 141); font-family: 'Courier New'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(247, 247, 247); display: inline !important; float: none; ">&lt;!-- centre --&gt;</span><br style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; color: rgb(0, 78, 141); font-family: 'Courier New'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; "><span style="color: rgb(0, 78, 141); font-family: 'Courier New'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(247, 247, 247); display: inline !important; float: none; ">&nbsp;&nbsp;&nbsp;&nbsp;&lt;div align=&quot;center&quot;&gt;</span><br style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; color: rgb(0, 78, 141); font-family: 'Courier New'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; "><span style="color: rgb(0, 78, 141); font-family: 'Courier New'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(247, 247, 247); display: inline !important; float: none; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Megaupload --&gt;</span><br style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; color: rgb(0, 78, 141); font-family: 'Courier New'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; "><span style="color: rgb(0, 78, 141); font-family: 'Courier New'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(247, 247, 247); display: inline !important; float: none; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[xfgiven_megaupload]</span><br style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; color: rgb(0, 78, 141); font-family: 'Courier New'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; "><span style="color: rgb(0, 78, 141); font-family: 'Courier New'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(247, 247, 247); display: inline !important; float: none; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href=&quot;[xfvalue_megaupload]&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;/uploads/mu.png&quot;&gt;&lt;/a&gt;</span><br style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; color: rgb(0, 78, 141); font-family: 'Courier New'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; "><span style="color: rgb(0, 78, 141); font-family: 'Courier New'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(247, 247, 247); display: inline !important; float: none; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[/xfgiven_megaupload]</span>
+<p align="center">src=&quot;/<span style="color: rgb(255, 0, 0);">uploads</span>/<span style="color: rgb(0, 153, 0);">mu.png</span>&quot; <br />
+<span style="color: rgb(255, 0, 0);">Mettre votre image dans le dossier Upload de datalife</span><br />
+<span style="color: rgb(0, 153, 0);">Changer le nom par le nom de votre image </span><br />
+<br />
+<br />
+Version lien intégré dans une image a gauche<br />
+<span style="color: rgb(0, 78, 141); font-family: 'Courier New'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(247, 247, 247); display: inline !important; float: none; ">&lt;!-- left --&gt;</span><br style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; color: rgb(0, 78, 141); font-family: 'Courier New'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; "><span style="color: rgb(0, 78, 141); font-family: 'Courier New'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(247, 247, 247); display: inline !important; float: none; ">&nbsp;&nbsp;&nbsp;&nbsp;&lt;div align=&quot;left&quot;&gt;</span><br style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; color: rgb(0, 78, 141); font-family: 'Courier New'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; "><span style="color: rgb(0, 78, 141); font-family: 'Courier New'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(247, 247, 247); display: inline !important; float: none; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Megaupload --&gt;</span><br style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; color: rgb(0, 78, 141); font-family: 'Courier New'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; "><span style="color: rgb(0, 78, 141); font-family: 'Courier New'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(247, 247, 247); display: inline !important; float: none; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[xfgiven_megaupload]</span><br style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; color: rgb(0, 78, 141); font-family: 'Courier New'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; "><span style="color: rgb(0, 78, 141); font-family: 'Courier New'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(247, 247, 247); display: inline !important; float: none; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href=&quot;[xfvalue_megaupload]&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;/uploads/mu.png&quot;&gt;&lt;/a&gt;</span><br style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; color: rgb(0, 78, 141); font-family: 'Courier New'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; "><span style="color: rgb(0, 78, 141); font-family: 'Courier New'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(247, 247, 247); display: inline !important; float: none; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[/xfgiven_megaupload]</span></p>
+<p align="center">
+src=&quot;/<span style="color: rgb(255, 0, 0);">uploads</span>/<span style="color: rgb(0, 153, 0);">mu.png</span>&quot; <br />
+<span style="color: rgb(255, 0, 0);">Mettre votre image dans le dossier Upload de datalife</span><br />
+<span style="color: rgb(0, 153, 0);">Changer le nom par le nom de votre image </span><br />
+<br />
+<br />
+Version lien intégré dans une image a droite<br />
+&nbsp;<span style="color: rgb(0, 78, 141); font-family: 'Courier New'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(247, 247, 247); display: inline !important; float: none; ">&lt;!-- right --&gt;</span><br style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; color: rgb(0, 78, 141); font-family: 'Courier New'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; "><span style="color: rgb(0, 78, 141); font-family: 'Courier New'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(247, 247, 247); display: inline !important; float: none; ">&nbsp;&nbsp;&nbsp;&nbsp;&lt;div align=&quot;right&quot;&gt;</span><br style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; color: rgb(0, 78, 141); font-family: 'Courier New'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; "><span style="color: rgb(0, 78, 141); font-family: 'Courier New'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(247, 247, 247); display: inline !important; float: none; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Megaupload --&gt;</span><br style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; color: rgb(0, 78, 141); font-family: 'Courier New'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; "><span style="color: rgb(0, 78, 141); font-family: 'Courier New'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(247, 247, 247); display: inline !important; float: none; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[xfgiven_megaupload]</span><br style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; color: rgb(0, 78, 141); font-family: 'Courier New'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; "><span style="color: rgb(0, 78, 141); font-family: 'Courier New'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(247, 247, 247); display: inline !important; float: none; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href=&quot;[xfvalue_megaupload]&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;/uploads/mu.png&quot;&gt;&lt;/a&gt;</span><br style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; color: rgb(0, 78, 141); font-family: 'Courier New'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; "><span style="color: rgb(0, 78, 141); font-family: 'Courier New'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(247, 247, 247); display: inline !important; float: none; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[/xfgiven_megaupload]</span><br />
+src=&quot;/<span style="color: rgb(255, 0, 0);">uploads</span>/<span style="color: rgb(0, 153, 0);">mu.png</span>&quot; <br />
+<span style="color: rgb(255, 0, 0);">Mettre votre image dans le dossier Upload de datalife</span><br />
+<span style="color: rgb(0, 153, 0);">Changer le nom par le nom de votre image </span><br />
+<br />
+Pour ouvrir les lien dans une nouvelle fen&ecirc;tre ajouter a vos codes <br />
+<span style="color: rgb(0, 78, 141); font-family: 'Courier New'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(247, 247, 247); display: inline !important; float: none; ">target=&quot;_blank&quot;</span>
+<br />
+exemple:<br />
+<span style="color: rgb(0, 78, 141); font-family: 'Courier New'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(247, 247, 247); display: inline !important; float: none; ">&lt;!-- centre --&gt;</span><br style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; color: rgb(0, 78, 141); font-family: 'Courier New'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; "><span style="color: rgb(0, 78, 141); font-family: 'Courier New'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(247, 247, 247); display: inline !important; float: none; ">&nbsp;&nbsp;&nbsp;&nbsp;&lt;div align=&quot;center&quot;&gt;</span><br style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; color: rgb(0, 78, 141); font-family: 'Courier New'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; "><span style="color: rgb(0, 78, 141); font-family: 'Courier New'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(247, 247, 247); display: inline !important; float: none; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Megaupload --&gt;</span><br style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; color: rgb(0, 78, 141); font-family: 'Courier New'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; "><span style="color: rgb(0, 78, 141); font-family: 'Courier New'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(247, 247, 247); display: inline !important; float: none; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[xfgiven_megaupload]</span><br style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; color: rgb(0, 78, 141); font-family: 'Courier New'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; "><span style="color: rgb(0, 78, 141); font-family: 'Courier New'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(247, 247, 247); display: inline !important; float: none; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href=&quot;[xfvalue_megaupload] target=&quot;_blank&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;/uploads/mu.png&quot;&gt;&lt;/a&gt;</span><br style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; color: rgb(0, 78, 141); font-family: 'Courier New'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; "><span style="color: rgb(0, 78, 141); font-family: 'Courier New'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(247, 247, 247); display: inline !important; float: none; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[/xfgiven_megaupload]</span><br style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; color: rgb(0, 78, 141); font-family: 'Courier New'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; "><span style="color: rgb(0, 78, 141); font-family: 'Courier New'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(247, 247, 247); display: inline !important; float: none; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- centre --&gt;</span>
+<br />
+Fin<br />
+<br />
+Petite explication<br />
+Fonctions&nbsp; des balises&nbsp; xfgiven_ et /xfgiven_&nbsp;&nbsp; elle sont utiliser pour cacher le field xfvalue_ si aucune informations n'a était donner lors de l'ajout d'un nouveau article, cela évite d'avoir un vide dans fullstory<br />
+car si vous ne mettez que la balise xfvalue_&nbsp;&nbsp; exemple:<br />
+[xfvalue_megaupload] le texte sera toujours apparent m&ecirc;me si lors d'un nouveau article le posteur n'a pas remplie cette fonction.<br />
+&nbsp;<br />
+<br />
+<span style="color: rgb(0, 0, 153);">Tutoriel réaliser par Lord59</span><br /></p>
+
+HTML;
+
+$help_sections['xprofile'] = <<<HTML
+<table width="100%">
+    <tr>
+        <td bgcolor="#EFEFEF" height="29" style="padding-left:10px;"><div class="navigation">Champs supplémentaires dans le profil des utilisateurs</div></td>
+    </tr>
+</table>
+<div class="unterline"></div>
+Cette fonction est conà§ue pour ajouter de nouveaux champs dans le profil des utilisateurs, en plus de celle existante.<br><br>
+Ajouter un nouveau champ en cliquant sur le lien "nouveau champ". Sur la page suivante, vous devez entrer un nom unique et les champs de description du champ. En outre, vous devez choisir si vous voulez que l'utilisateur d'ajouter des informations supplémentaires lors de l'inscription, si le champ est purement personnelle, ainsi que si l'utilisateur peut en outre modifier le contenu de ce champ.<br><br>
+Des champs supplémentaires sont disponibles pour la visualisation des commentaires et de profil, vous devez ajouter la balise template [xfvalue_X], Ð³Ð´Ðµ X - Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð¿Ð¾Ð»Ñ (Ð¸Ð¼Ñ, ÐºÐ¾Ñ‚Ð¾Ñ€Ð¾Ðµ Ð’Ñ‹ Ð²Ð²ÐµÐ»Ð¸ Ð¿Ñ€Ð¸ Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ð¸ Ð½Ð¾Ð²Ð¾Ð³Ð¾ Ð¿Ð¾Ð»Ñ). Ð¢Ð°ÐºÐ¶Ðµ Ð¼Ð¾Ð¶Ð½Ð¾ Ð¸ÑÐ¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÑŒ ÑÐ²ÑÐ·ÐºÑƒ [xfgiven_X]...[/xfgiven_X].<br><br>
+exemple de champs:
+<div class="code">
+&nbsp;&nbsp;- Titre: ville<br>
+&nbsp;&nbsp;- Description: La Ville<br>
+&nbsp;&nbsp;- Type de champ: Une ligne<br>
+&nbsp;&nbsp;- Ajouter à  la page d'inscription: oui<br>
+&nbsp;&nbsp;- Le champ peut être changé par l'utilisateur: Oui<br>
+&nbsp;&nbsp;- domaine personnel: non<br><br>
+motif comments.tpl et userinfo.tpl ajouter<br>
+[xfgiven_city] ville: [xfvalue_ville] [/xfgiven_ville]</div>
+Si un utilisateur est ajouté à  votre profil de ville tels que "Moscou", le résultat du travail sera le suivant code HTML:
+<div class="code">Ville: Moscou</div>
+Rappelez-vous que les noms de champs peuvent utiliser uniquement des lettres et des chiffres.
+HTML;
+
+$help_sections['banners'] = <<<HTML
+<table width="100%">
+    <tr>
+        <td bgcolor="#EFEFEF" height="29" style="padding-left:10px;"><div class="navigation">Gérer la publicité sur le site</div></td>
+    </tr>
+</table>
+<div class="unterline"></div>
+Ce module est conà§u pour un déploiement rapide et facile ainsi que la gestion de vos documents promotionnels sur le site. Pour placer votre bannière sur ce site, vous pouvez simplement ajouter une balise une fois la bannière dans le modèle, alors vous pouvez facilement changer ou modifier le code de la bannière de contrà´le, sans affecter les modèles.<br /><br />
+Après avoir ajouté votre bannière, vous pouvez placer une balise dans le modèle <b>main.tpl</b> ou <b>fullstory.tpl</b>. Si vous ajoutez une bannière à  afficher entre les nouvelles à  court, puis ajouter la balise template est inutile, la bannière sera ajoutée entre les nouvelles automatiquement.
+<br />Un exemple:
+<div class="code">
+&nbsp;&nbsp;- nom: header<br>
+&nbsp;&nbsp;- Description: Top banner<br>
+&nbsp;&nbsp;- Activer l'affichage d'une bannière: Oui<br>
+&nbsp;&nbsp;- Afficher uniquement les principales: Non<br>
+&nbsp;&nbsp;- Congeler dans un dispositif: Non<br>
+&nbsp;&nbsp;- Localisation dans les Nouvelles courtes: Non<br><br>
+Ensuite, vous pouvez ajouter à  votre modèle <b>main.tpl</b> ou <b>fullstory.tpl</b> tag pour afficher une bannière: <b>{banner_header}</b><br />
+</div>
+Vous pouvez utiliser le HTML et JavaScriptsi pour ajoutez un code de la bannière.
+HTML;
+
+
+$help_sections['date'] = <<<HTML
+<table width="100%">
+    <tr>
+        <td bgcolor="#EFEFEF" height="29" style="padding-left:10px;"><div class="navigation">fonction date() - Formater une date et heure local</div></td>
+    </tr>
+</table>
+<div class="unterline"></div>
+Dans le format de ligne reconnue par les caractères suivants:
+<UL>
+<LI> <b> A </ b> - "am" ou "h"
+<LI> <b> A </ b> - "AM" ou "PM"
+<LI> <b> B </ b> - Temps Internet Swatch
+<LI> <b> D </ b> - jour (nombre) du mois, 2 chiffres avec des zéros, si nécessaire, par exemple, "01" à  "31"
+<LI> <b> D </ b> - jour de la semaine, textuel, 3 lettres, par exemple, "Fri"
+<LI> <b> F </ b> - mois, textuel, version longue, par exemple, "Janvier"
+<LI> <b> G </ b> - heure, le format 12 heures sans les zéros, c.-à - de "1" à  "12"
+<LI> <b> G </ b> - heure, au format 24 heures sans les zéros, c.-à - de "0" à  "23"
+<LI> <b> H </ b> - heure, le format 12 heures, c'est à  dire "01" à  "12"
+<LI> <b> H </ b> - heure, au format 24 heures, c'est à  dire "00" à  "23"
+<LI> <b> I </ b> - minutes, soit "00" à  "59"
+<LI> <b> I </ b> (i majuscule) - "1" si l'heure avancée, "0" - autrement.
+<LI> <b> J </ b> - jour (nombre) du mois sans les zéros, c.-à - à  partir de "1" à  "31"
+<LI> <b> L </ b> ('L' en minuscule) - le jour de la semaine, textuel, version longue, par exemple, "Vendredi"
+<LI> <b> L </ b> - booléen, indique si une année bissextile, c'est à  dire "0" ou "1"
+<LI> <b> M </ b> - un mois, c.-à - "01" à  "12"
+<LI> <b> M </ b> - mois, textuel, 3 lettres, par exemple, "Jan"
+<LI> <b> N </ b> - mois sans zéros, c.-à - de "1" à  "12"
+<LI> <b> O </ b> - La différence de Greenwich Mean Time, en heures, par exemple, "0200"
+<LI> <b> R </ b> - format RFC date de 822, par exemple, "Thu, 21 décembre 2000 16:01:07 +0200" (ajouté en PHP 4.0.4)
+<LI> <b> S </ b> - seconde, c.-à - "00" à  "59"
+<LI> <b> S </ b> - suffixe ordinal anglais pour la journée (nombre) du mois, 2 caractères, c.-à - "St", "e", "e" ou "e"
+<LI> <b> T </ b> - le nombre de jours de ce mois, c.-à - à  partir de "28" à  "31"
+<LI> <b> T </ b> - Installation Fuseau horaire / fuseau horaire sur la machine, par exemple, "EST" ou
+"MDT"
+<LI> <b> U </ b> - une deuxième période d'Unix Epoch (en commenà§ant par 1er Janvier 1970 00:00:00 GMT)
+<LI> <b> W </ b> - jour de la semaine, numérique, c.-à - de "0" (dimanche) à  "6" (samedi)
+<LI> <b> W </ b> - ISO-8601 numéro de la semaine de l'année, les semaines commencent le lundi / lundi
+(Introduit en PHP 4.1.0)
+<LI> <b> Y </ b> - année, 4 chiffres, par exemple, "1999"
+<LI> <b> Y </ b> - une année, 2 chiffres, par exemple, "99"
+<LI> <b> Z </ b> - jour de l'année, c.-à - à  partir de "0" à  "365"
+<LI> <b> Z </ b> - le décalage horaire en secondes (ie "-43200" à  "43200").
+Offset fuseaux horaires à  l'ouest de UTC est toujours négatif, et pour la zone à 
+à  l'est de UTC -. toujours positif </ LI> </ UL>
+
+<br />
+<table width="100%">
+    <tr>
+        <td bgcolor="#EFEFEF" height="29" style="padding-left:10px;"><div class="navigation" style="text-align: center;">Votre support fr</div>
+    </tr>
+</table>
+
+<h3 style="color: Red; text-align: center;">Si vous avez un problème particulier avec votre datalife veillez vous rendre sur ce site<a target="_blank" href="http://www.dle-fr.org/"> DLE-FR.ORG</a> pour un support FRENCH (Français) merci by team dle-fr.org</h3>
+<h3 style="color: Red;">&#160;</h3>
+
+HTML;
+$help_sections['social'] = <<<HTML
+<table width="100%">
+    <tr>
+        <td bgcolor="#EFEFEF" height="29" style="padding-left:10px;"><div class="navigation">Configuration de l'authentification via le réseau Vkontakte</div></td>
+    </tr>
+</table>
+<div class="unterline"></div>
+La première chose que vous devez créer une nouvelle application sur le site de réseautage social <a href="http://vk.com/editapp?act=create" target="_blank">Vkontakte</a>.<br><br>
+Dans le formulaire, saisissez le nom de l'application, Sélectionnez le type "Site Web", comme une adresse de site Web, entrez le chemin http://votre site/index.php?do=auth-social&provider=vk. En tant que domaine de base, précisez: votre site.fr
+<br /><br /><div style="text-align:center;"><img src="engine/skins/images/vk1.jpg" /></div>
+<br />Après avoir appuyé sur le bouton "Connect Site", vous devrez entrer un code de vérification qui va venir sur SMS. Si vous passez le test, vous devez ouvrir le formulaire ci-dessous avec les paramètres de l'application:
+<br /><br /><div style="text-align:center;"><img src="engine/skins/images/vk2.jpg" /></div>
+<br />De cette forme, vous aurez besoin des informations telles que l' "ID d'application" et "clé sécurisée", que vous devez entrer dans le script panneau d'administration, dans les paramètres de réseautage social. Ces champs seront uniques à votre site, ils ne peuvent pas être copiés à partir de la capture d'écran ci-dessus.
+<br /><br />Par la suite, dedans <b>login.tpl</b> Placez le code suivant :
+<div class="code">[vk]&lt;a href="{vk_url}" target="_blank"&gt;Autorisation via Vkontakte&lt;/a&gt;[/vk]</div>
+balise [vk] Texte [/vk] affiche le texte entre eux, si l'autorisation est activée à l'aide du réseau social Vkontakte. Une balise {vk_url} affiche un lien URL à l'autorisation dans le social. réseau.
+<br><br>
+<table width="100%">
+    <tr>
+        <td bgcolor="#EFEFEF" height="29" style="padding-left:10px;"><div class="navigation">Configuration de l'authentification via les camarades de classe de réseau</div></td>
+    </tr>
+</table>
+<div class="unterline"></div>
+Pour vous inscrire un site sur lequel placer l'autorisation doit être rempli par Classmates <a href="http://www.odnoklassniki.ru/devaccess" target="_blank">former et obtenir le droit de développeur</a>. Après cela, ouvrez le <a href="http://www.odnoklassniki.ru/games" target="_blank">"jeu"</a> et à droite dans le menu doit être lien <a href="http://www.odnoklassniki.ru/dk?st.cmd=appsInfoMyDevList&st._aid=Apps_Info_MyDev" target="_blank">"mon Site"</a>. Puis cliquez sur "Ajouter application" et de remplir le formulaire:<br><br>
+<br /><br /><div style="text-align:center;"><img src="engine/skins/images/odnoklassniki1.jpg" /></div>
+<br />En remplissant le formulaire assurez-vous de spécifier le type d'application "le Web", et vérifier également la case "External". Après l'ajout d'une nouvelle application sur votre boîte e-mail sera envoyé à vous avec les bons réglages.
+<br /><br /><div style="text-align:center;"><img src="engine/skins/images/odnoklassniki2.jpg" /></div>
+<br />De la lettre que vous avez besoin de ces options telles que "Application ID", "Applications à clé publique »,« applications clé secrète », que vous devez entrer dans le script panneau d'administration, dans les paramètres de réseaux sociaux. Ces domaines seront uniques à votre site, ils ne peuvent pas être copiés à partir de la capture d'écran ci-dessus.
+<br /><br />Par la suite, dans <b>login.tpl</b> Placez sur le code suivant:
+<div class="code">[odnoklassniki]&lt;a href="{odnoklassniki_url}" target="_blank"&gt;Se connecter avec Classmates&lt;/a&gt;[/odnoklassniki]</div>
+Balise [odnoklassniki] Texte [/odnoklassniki] affiche le texte entre eux, si elle est activée en utilisant l'autorisation réseau social Classmates. Une balise {odnoklassniki_url} affiche un lien URL à l'autorisation du site.
+<br><br>
+<table width="100%">
+    <tr>
+        <td bgcolor="#EFEFEF" height="29" style="padding-left:10px;"><div class="navigation">Configuration de l'authentification via le réseau Facebook</div></td>
+    </tr>
+</table>
+<div class="unterline"></div>
+Pour commencer, vous devez créer une nouvelle application sur le site de réseautage social <a href="https://developers.facebook.com/apps" target="_blank">Facebook</a>.<br><br>
+Dans le coin supérieur droit, cliquez sur le bouton "+ Créez une nouvelle application". Ensuite, nous entrons dans le nom de l'application:
+<br /><br /><div style="text-align:center;"><img src="engine/skins/images/fc1.jpg" /></div>
+<br />En outre, sur la page des paramètres de votre application, appuyez sur la touche "Add Platform". Dans la zone Ouvrir, sélectionnez "Website" et entrez l'adresse du site http://votre site.fr/
+<br /><br /><div style="text-align:center;"><img src="engine/skins/images/fc2.jpg" /></div>
+<br />Après cela enregistre tous les paramètres. Pour de plus amples travaux, vous aurez besoin des paramètres que vous pouvez trouver dans les domaines suivants:
+<br /><br /><div style="text-align:center;"><img src="engine/skins/images/fc3.jpg" /></div>
+<br />que vous devez entrer dans le script panneau d'administration, dans les paramètres de réseautage social. Ces champs seront uniques à votre site, ils ne peuvent pas être copiés à partir de la capture d'écran ci-dessus.
+<br /><br />Par la suite, dans <b>login.tpl</b> Placez sur le code suivant:
+<div class="code">[facebook]&lt;a href="{facebook_url}" target="_blank"&gt;Connectez-vous avec Facebook&lt;/a&gt;[/facebook]</div>
+Balise [facebook] Texte [/facebook] affiche le texte entre eux, si l'autorisation est activée à l'aide du site de réseautage social Facebook. Une balise {facebook_url} affiche un lien URL à l'autorisation dans le social.
+<br><br>
+<table width="100%">
+    <tr>
+        <td bgcolor="#EFEFEF" height="29" style="padding-left:10px;"><div class="navigation">Configuration de l'authentification par réseau Google</div></td>
+    </tr>
+</table>
+<div class="unterline"></div>
+Pour commencer, vous devez créer une nouvelle application sur le site <a href="https://code.google.com/apis/console/" target="_blank">Google</a>.<br><br>
+Dans le menu de gauche, sélectionnez l'élément "APIs & auth" et dans le sous-menu sélectionner "Credentials". Sur la page suivante, cliquez sur le gros bouton rouge "Create new Client ID".
+<br /><br /><div style="text-align:center;"><img src="engine/skins/images/google1.jpg" /></div>
+<br />Remplissez le formulaire comme indiqué dans la capture d'écran, sauf l'orthographe de l'adresse de votre site. Et les magasins. Après cela, vous devriez obtenir ceci:
+<br /><br /><div style="text-align:center;"><img src="engine/skins/images/google2.jpg" /></div>
+<br />Vous aurez besoin de ces options telles que "Client ID" et "Client Secret", que vous devez entrer dans le script panneau d'administration, dans les paramètres de réseautage social. Ces champs seront uniques à votre site, ils ne peuvent pas être copiés à partir de la capture d'écran ci-dessus.
+<br /><br />Par la suite, dans <b>login.tpl</b> Placez sur le code suivant:
+<div class="code">[google]&lt;a href="{google_url}" target="_blank"&gt;Connectez-vous avec Google&lt;/a&gt;[/google]</div>
+Balise [google] Texte [/google] affiche le texte entre eux, si l'autorisation est activée à l'aide du réseau social de Google. Une Balise {google_url} affiche un lien URL vers le réseau d'autorisation.
+<br><br>
+<table width="100%">
+    <tr>
+        <td bgcolor="#EFEFEF" height="29" style="padding-left:10px;"><div class="navigation">Configuration de l'authentification via le réseau Mail.Ru</div></td>
+    </tr>
+</table>
+<div class="unterline"></div>
+Pour commencer, vous devez créer une nouvelle application sur le site <a href="http://api.mail.ru/sites/my/add" target="_blank">Mail.Ru</a>.<br><br>
+Sur la page suivante, tout d'abord, d'accord avec les règles de sites de placement. Ensuite, remplissez le formulaire ci-dessous:
+<br /><br /><div style="text-align:center;"><img src="engine/skins/images/mailru1.jpg" /></div>
+<br />Ensuite, cliquez sur le bouton "procéder" et procéder à l'étape suivante. La troisième étape consiste à télécharger le fichier receiver.html, le placer dans le répertoire de votre projet et donner Mail.ru occasion de vérifier l'existence du fichier. Après avoir réussi à ajouter le site au service Mail.ru, devrait générer le message suivant avec des paramètres spéciaux:
+<br /><br /><div style="text-align:center;"><img src="engine/skins/images/mailru2.jpg" /></div>
+<br />Vous aurez besoin de ces options telles que "ID" et "la clé secrète", vous devez entrer dans le script panneau d'administration, dans les paramètres de réseautage social. Ces champs seront uniques à votre site, ils ne peuvent pas être copiés à partir de la capture d'écran ci-dessus.
+<br /><br />Par la suite, dans <b>login.tpl</b> Placez sur le code suivant:
+<div class="code">[mailru]&lt;a href="{mailru_url}" target="_blank"&gt;Se connecter avec Mail.Ru&lt;/a&gt;[/mailru]</div>
+Balise [mailru] Texte [/mailru] affiche le texte ci-joint en eux, si elle est activée autorisation à l'aide des réseaux sociaux mail.ru. Une Balise {mailru_url} affiche un lien URL vers le réseau d'autorisation.
+<br><br>
+<table width="100%">
+    <tr>
+        <td bgcolor="#EFEFEF" height="29" style="padding-left:10px;"><div class="navigation">Configuration de l'authentification via le réseau Yandex</div></td>
+    </tr>
+</table>
+<div class="unterline"></div>
+Pour commencer, vous devez créer une nouvelle application sur le site <a href="https://oauth.yandex.ru/client/new" target="_blank">Yandex</a>.<br><br>
+<div style="text-align:center;"><img src="engine/skins/images/yandex1.jpg" /></div>
+<br />le nom sera "Yandex Auth". Dans le droit-cliquez sur "Yandeks.Login" et sélectionner tous les éléments: adresse mail, date de naissance, nom d'utilisateur, le nom complet. Si l'utilisateur remplit les données dans votre profil, puis plus tard, nous allons apprendre à les dostup.Na page suivante, nous allons montrer bloc avec des paramètres spéciaux:
+<div style="text-align:center;"><img src="engine/skins/images/yandex2.jpg" /></div>
+<br />Vous aurez besoin de ces options telles que "ID d'application" et "Mot de passe d'application", vous devez entrer dans le script panneau d'administration, dans les paramètres de réseautage social. Ces champs seront uniques à votre site, ils ne peuvent pas être copiés à partir de la capture d'écran ci-dessus.
+<br /><br />Par la suite, dans <b>login.tpl</b> Placez sur le code suivant:
+<div class="code">[yandex]&lt;a href="{yandex_url}" target="_blank"&gt;Se connecter avec Yandex&lt;/a&gt;[/yandex]</div>
+Balise [yandex] Texte [/yandex] affiche le texte entre eux, si l'autorisation a permis l'utilisation des réseaux sociaux Yandex. Une Balise {yandex_url} affiche un lien URL vers le réseau d'autorisation.
+HTML;
+?>

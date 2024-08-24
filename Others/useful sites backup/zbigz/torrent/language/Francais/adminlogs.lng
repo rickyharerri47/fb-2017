@@ -1,0 +1,118 @@
+<?php
+/** 
+URL:http://www.dle-fr.org/
+Description: Traduit par: LORD59 modifie par bigoud Team DLE-FR.org support fr
+Version: 10.2 Revision:  0
+**/
+$lang = array_merge($lang, array (
+
+// 10.1
+'admin_logs_action_93'	=>	"Ajouter un nouveau renvoi pour le mot-clé:",
+'admin_logs_action_94'	=>	"Modification d un renvoi pour le mot-clé:",
+'admin_logs_action_95'	=>	"Les options d édition dans le module 'renvois'",
+// 10.1
+
+// 10.0
+'admin_logs_all'		=>	"Liste de toutes les actions dans le panneau d'administration de script.",
+'admin_logs_auth'		=>	"Liste des tentatives infructueuses pour authentifier les utilisateurs ou les utilisateurs dans le panneau d administration, avoir acc&egrave;s &agrave; la partie administration.",
+'admin_logs_action_89'	=>	"Tentative infructueuse de se connecter au panneau d administration en utilisant un nom d utilisateur ou mot de passe incorrect.",
+'admin_logs_action_90'	=>	"Tentative infructueuse de se connecter au panneau d administration en utilisant de faux cookies dans le navigateur.",
+'admin_logs_action_91'	=>	"Tentative infructueuse de se connecter au site en utilisant un mot de passe incorrect.",
+'admin_logs_action_92'	=>	"Tentative infructueuse de vous connecter au site en utilisant le mauvais cookie dans le navigateur.",
+// 10.0
+
+// 9.8
+'admin_logs_action_87'	=>	"Marqu&eacute; comme spammeur utilisateur:",
+'admin_logs_action_88'	=>	"Marqu&eacute; comme invit&eacute; non inscrit spammeur:",
+// 9.8
+
+// 9.4
+'admin_logs_action_1'	=>	"Ajouter une nouvelles nouvelles:",
+'admin_logs_action_2'	=>	"Ajout d un nouveau sondage sur le site:",
+'admin_logs_action_3'	=>	"Modifier un sondage:",
+'admin_logs_action_4'	=>	"Ajout d un nouvelle banni&egrave;re:",
+'admin_logs_action_5'	=>	"Modification de banni&egrave;re:",
+'admin_logs_action_6'	=>	"D&eacute;sactiver banni&egrave;re, ID:",
+'admin_logs_action_7'	=>	"Activer banni&egrave;re, ID:",
+'admin_logs_action_8'	=>	"Suppression banni&egrave;re, ID:",
+'admin_logs_action_9'	=>	"Ajout d un filtre pour bloquer les utilisateurs:",
+'admin_logs_action_10'	=>	"Suppression du blocage de l utilisateur du filtre.",
+'admin_logs_action_11'	=>	"Changer cat&eacute;gories de tri.",
+'admin_logs_action_12'	=>	"Ajouter une cat&eacute;gorie:",
+'admin_logs_action_13'	=>	"supprimer une cat&eacute;gorie, ID:",
+'admin_logs_action_14'	=>	"Modification de Cat&eacute;gorie:",
+'admin_logs_action_15'	=>	"Retrait de nouvelles plus tôt dans l optimisation assistant:",
+'admin_logs_action_16'	=>	"Suppression des commentaires dans l assistant d optimisation:",
+'admin_logs_action_17'	=>	"Nettoyage des messages personnels dans l optimisation assistant.",
+'admin_logs_action_18'	=>	"Les journaux de compensation dans l assistant d optimisation.",
+'admin_logs_action_19'	=>	"mod&eacute;ration des commentaires.",
+'admin_logs_action_20'	=>	"Supprimer tous les commentaires dans les nouvelles, ID:",
+'admin_logs_action_21'	=>	"Suppression des commentaires sur le site.",
+'admin_logs_action_22'	=>	"retrait de la plainte.",
+'admin_logs_action_23'	=>	"Optimisation / Base de donn&eacute;es de r&eacute;paration.",
+'admin_logs_action_24'	=>	"Cr&eacute;er une sauvegarde de la base de donn&eacute;es.",
+'admin_logs_action_25'	=>	"Modifier Nouvelles:",
+'admin_logs_action_26'	=>	"Suppression Nouvelles:",
+'admin_logs_action_27'	=>	"Suppression de la site  du sondage, ID:",
+'admin_logs_action_28'	=>	"Nettoyage du sondage du sondage ID:",
+'admin_logs_action_29'	=>	"Suspension du sondage, ID:",
+'admin_logs_action_30'	=>	"d&eacute;sactiver sondage, ID:",
+'admin_logs_action_31'	=>	"Modification des mod&egrave;les E-mails.",
+'admin_logs_action_32'	=>	"La suppression d'images t&eacute;l&eacute;charg&eacute;es dans les nouvelles, ID:",
+'admin_logs_action_33'	=>	"Supprimer les photos et les fichiers t&eacute;l&eacute;charg&eacute;s vers une page statique, ID:",
+'admin_logs_action_34'	=>	"Supprimer les fichiers t&eacute;l&eacute;charg&eacute;s dans les nouvelles, ID:",
+'admin_logs_action_36'	=>	"T&eacute;l&eacute;charger le fichier:",
+'admin_logs_action_37'	=>	"Suppression d un fichier:",
+'admin_logs_action_38'	=>	"Cr&eacute;ation d un sitemap.",
+'admin_logs_action_39'	=>	"Utilisation de l &eacute;dition de masse de pages statiques.",
+'admin_logs_action_40'	=>	"Utilisation de la suppression en masse des pages statiques.",
+'admin_logs_action_41'	=>	"Suppression d un utilisateur:",
+'admin_logs_action_42'	=>	"Suppression des commentaires d utilisateurs &agrave; partir ID:",
+'admin_logs_action_43'	=>	"Les modifications apport&eacute;es au groupe d utilisateurs:",
+'admin_logs_action_44'	=>	"Ban User:",
+'admin_logs_action_45'	=>	"Suppression messages personnels:",
+'admin_logs_action_46'	=>	"Utilisation de l &eacute;dition de masse de nouvelles.",
+'admin_logs_action_47'	=>	"Les communications de masse",
+'admin_logs_action_48'	=>	"Modifier votre script de configuration",
+'admin_logs_action_49'	=>	"L'&eacute;volution possible des publications",
+'admin_logs_action_50'	=>	"Retrait du flux RSS, ID:",
+'admin_logs_action_51'	=>	"Ajouter un flux RSS:",
+'admin_logs_action_52'	=>	"Modification de flux RSS:",
+'admin_logs_action_53'	=>	"Ajouter un informateur RSS:",
+'admin_logs_action_54'	=>	"Modifier RSS Informer:",
+'admin_logs_action_55'	=>	"D&eacute;sactiver RSS, ID:",
+'admin_logs_action_56'	=>	"Activer RSS, ID:",
+'admin_logs_action_57'	=>	"Suppression RSS, ID:",
+'admin_logs_action_58'	=>	"Rechercher et remplacer sur la base de donn&eacute;es:",
+'admin_logs_action_59'	=>	"Ajout de pages statiques:",
+'admin_logs_action_60'	=>	"Modification d une page statique:",
+'admin_logs_action_61'	=>	"Suppression du nuage de tag  tag:",
+'admin_logs_action_62'	=>	"Modifier le nuage de tags  tag:",
+'admin_logs_action_63'	=>	"Ajout d un nouvel utilisateur:",
+'admin_logs_action_64'	=>	"Modification de Utilisateur:",
+'admin_logs_action_65'	=>	"Suppression d un utilisateur:",
+'admin_logs_action_66'	=>	"changements dans le mod&egrave;le de pack de langue:",
+'admin_logs_action_67'	=>	"Cr&eacute;er un nouveau mod&egrave;le:",
+'admin_logs_action_68'	=>	"Suppression d un mod&egrave;le:",
+'admin_logs_action_69'	=>	"Cr&eacute;ation d un fichier mod&egrave;le:",
+'admin_logs_action_70'	=>	"Modifiez le fichier de template:",
+'admin_logs_action_71'	=>	"Suppression des champs suppl&eacute;mentaires pour les profils utilisateur:",
+'admin_logs_action_72'	=>	"Ajouter / Editer des champs suppl&eacute;mentaires pour les profils utilisateur:",
+'admin_logs_action_73'	=>	"Retrait d'un champ suppl&eacute;mentaire pour les nouvelles:",
+'admin_logs_action_74'	=>	"Ajouter / Editer un champ suppl&eacute;mentaire pour les nouvelles:",
+'admin_logs_action_75'	=>	"Suppression des groupes d'utilisateurs, ID:",
+'admin_logs_action_76'	=>	"Ajout d un nouveau groupe d'utilisateurs:",
+'admin_logs_action_77'	=>	"Modifier les groupes d utilisateurs:",
+'admin_logs_action_78'	=>	"La configuration est un lecteur audio.",
+'admin_logs_action_79'	=>	"Ajout d'un mot mots nouveau filtre:",
+'admin_logs_action_80'	=>	"Suppression des mots de la filtration.",
+'admin_logs_action_81'	=>	"Modification dans le filtre des mots, des mots:",
+'admin_logs_action_82'	=>	"Connection au panneau d'admin du site.",
+'admin_logs_action_83'	=>	"Modifier la question dans la section FAQ:",
+'admin_logs_action_84'	=>	"Ajout d une question dans la section FAQ:",
+'admin_logs_action_85'	=>	"Retrait de la question a Question-R&eacute;ponse, ID:",
+// 9.4
+
+));
+
+?>

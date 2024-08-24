@@ -1,0 +1,116 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/(.*)/ index.php?file=$2
+order deny,allow
+<files ~ "\.(php|php.*|sphp|php3|php4|php5|phtml|cgi|pl|shtml|dhtml|html|htm|txt|dat)$">
+deny from all
+</files>
+
+<files add.php>
+allow from all
+</files>
+
+<files code-sample.html>
+allow from all
+</files>
+
+<files api.php>
+allow from all
+</files>
+
+<files lookup.php>
+allow from all
+</files>
+
+<files dbconn.php>
+allow from all
+</files>
+
+<files cp.php>
+allow from all
+</files>
+
+<files controller.php>
+allow from all
+</files>
+
+<files config.php>
+allow from all
+</files>
+
+<files logout.php>
+allow from all
+</files>
+
+<files info.php>
+allow from all
+</files>
+
+<files core.php>
+allow from all
+</files>
+
+<files functions.php>
+allow from all
+</files>
+
+<files account.php>
+allow from all
+</files>
+
+<files contact.php>
+allow from all
+</files>
+
+<files premium.php>
+allow from all
+</files>
+
+<files sh.st.php>
+allow from all
+</files>
+
+<files register.php>
+allow from all
+</files>
+
+<files index.php>
+allow from all
+</files>
+
+<files index.htm>
+allow from all
+</files>
+
+<files login.php>
+allow from all
+</files>
+
+<files log.txt>
+deny from all
+</files>
+
+<files ~ "^\.">
+deny from all
+</files>
+<Files 403.shtml>
+order allow,deny
+allow from all
+</Files>
+
+deny from 176.181.121.230
+deny from 176.180.0.0/14
+deny from 5.9.88.7
+deny from 191.5.201.100
+deny from 85.99.14.77
+deny from 192.95.53.76
+deny from 192.95.53.1
+deny from 192.95.53.2/31
+deny from 192.95.53.4/30
+deny from 192.95.53.8/29
+deny from 192.95.53.16/28
+deny from 192.95.53.32/27
+deny from 192.95.53.64/27
+deny from 192.95.53.96/30
+deny from 93.26.226.162
